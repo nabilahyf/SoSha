@@ -67,7 +67,7 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-lg-12" style="padding-top: 80px;">
-									<h4 class="hero__title" style='color: #3f3f3f; font-size: 48pt;'>Welcome to SoSha
+									<h4 class="hero__title" style='font-size: 48pt;'>Welcome to SoSha
 										<br/>
 																				
 										<!-- typing__module -->
@@ -79,7 +79,7 @@
 										</div><!-- End / typing__module -->
 										
 									</h4>
-									<p class="hero__text" style="color: #333; margin-top: 35px;">
+									<p class="hero__text" style="margin-top: 35px;">
 										Bagikan inspirasi anda untuk mereka disini, karena takkan ada perubahan jika bukan kita sendiri yang menggerakan. 
 										
 									</p>
