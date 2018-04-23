@@ -81,4 +81,33 @@ class Welcome extends CI_Controller {
 			}
 		}
 	}
+
+	function login(){
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		
+		$checkEmail = $this->M_user->read_data($email,$password);	
+	
+		if($checkEmail==NULL){			
+			redirect('X');			
+		}else{
+			$newdata = array(
+				'user_id' 		=> $checkEmail->user_id,
+				'foto'			=> $checkEmail->foto,	
+				'email' 		=> $checkEmail->email,
+				'full_name'		=> $checkEmail->full_name,
+				'alamat'		=> $checkEmail->alamat,
+				'no_tlp'		=> $checkEmail->no_tlp,
+				'jenkel'		=> $checkEmail->jenkel,
+				'birthday'		=> $checkEmail->birthday,
+				'auth'			=> $checkEmail->auth
+
+			  );
+			//set seassion
+			$this->session->set_userdata($newdata);
+			redirect('Welcome');
+		}		
+	}
+
+
 }

@@ -103,24 +103,22 @@
 							<h4 class="modal-title">Sign in</h4>
 							</div>
 							<div class="modal-body">
-								<form action="/action_page.php">
+							<?php echo form_open_multipart('Welcome/login');?>
 								<div class="imgcontainer">
 									<img src="assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
 								</div>
 
-								<div>
-									<label for="uname"><b>Email</b></label>
-									<input type="text" placeholder="Enter Email" name="uname" required>
+									<label for="email"><b>Email</b></label>
+									<input type="text" placeholder="Enter Email" name="email" required>
 
-									<label for="psw"><b>Password</b></label>
-									<input type="password" placeholder="Enter Password" name="psw" required>
+									<label for="password"><b>Password</b></label>
+									<input type="password" placeholder="Enter Password" name="password" required>
 										
-								</div>
+									<div class="modal-footer">
+									<span style="float: left;">Don't have an account? Sign up as <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpVolunteer">Volunteer</a> |  <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpMember">only Member</a></span>
+									<button type="submit" name="login" class="btn btn-default">Submit</button>
+									</div>
 								</form>
-							</div>
-							<div class="modal-footer">
-							<span style="float: left;">Don't have an account? Sign up as <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpVolunteer">Volunteer</a> |  <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpMember">only Member</a></span>
-							<button type="submit" class="btn btn-default" data-dismiss="modal">Submit</button>
 							</div>
 						</div>
 						
@@ -177,7 +175,7 @@
 
 								<div class="modal-footer">
 								<span style="float: left;">Back to <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myLogin">Sign in</a> | <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpMember">Sign up as Member</a> </span>
-								<button type="submit" name="regist">Submit</button>
+								<button type="submit" name="regist_volunteer" class="btn btn-default">Submit</button>
 								</div>
 							</form>
 						</div>
@@ -216,7 +214,7 @@
 
 								<div class="modal-footer">
 								<span style="float: left;">Back to <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myLogin">Sign in</a> | <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpVolunteer">Sign up as Volunteer</a> </span>
-								<button type="submit" name="regist">Submit</button>
+								<button type="submit" name="regist_member" class="btn btn-default">Submit</button>
 								</div>
 							</form>
 						</div>
