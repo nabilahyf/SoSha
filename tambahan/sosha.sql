@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 23, 2018 at 11:42 PM
+-- Generation Time: Apr 24, 2018 at 12:32 AM
 -- Server version: 5.7.21-0ubuntu0.17.10.1
 -- PHP Version: 7.1.15-0ubuntu0.17.10.1
 
@@ -73,13 +73,14 @@ CREATE TABLE `rekomendasi_tempat` (
 
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
+  `foto` text NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` text NOT NULL,
   `full_name` varchar(60) NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `no_tlp` varchar(12) NOT NULL,
   `jenkel` char(1) NOT NULL,
-  `birthday` date NOT NULL
+  `birthday` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

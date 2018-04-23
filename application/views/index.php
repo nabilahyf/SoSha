@@ -92,7 +92,7 @@
 					
 					<!-- Trigger the modal with a button -->
 
-					<!-- Modal -->
+					<!-- Modal Log in-->
 					<div class="modal fade" id="myLogin" role="dialog">
 						<div class="modal-dialog">
 						
@@ -119,7 +119,7 @@
 								</form>
 							</div>
 							<div class="modal-footer">
-							<span style="float: left;">Don't have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUp">Sign up</a> </span>
+							<span style="float: left;">Don't have an account? Sign up as <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUp">Volunteer</a> |  <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUp">only Member</a></span>
 							<button type="submit" class="btn btn-default" data-dismiss="modal">Submit</button>
 							</div>
 						</div>
@@ -127,7 +127,7 @@
 						</div>
 					</div>
 
-					<!-- Modal -->
+					<!-- Modal Sign Up-->
 					<div class="modal fade" id="mySignUp" role="dialog">
 						<div class="modal-dialog">
 						
@@ -137,26 +137,49 @@
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
 							<h4 class="modal-title">Sign up</h4>
 							</div>
-							<div class="modal-body">
-								<form action="/action_page.php">
-								<div class="imgcontainer">
-									<img src="assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
-								</div>
+							<?php echo form_open_multipart('Welcome/regist');?>
+								<div class="modal-body" style="height: 435px; overflow-y: auto; padding: 20px;">
+																	
+									<label for="gambar"><b>Foto Profil</b></label>
+									<input type="file" name="gambar" class="form-control-file" id="exampleFormControlFile1" style="border-width: 0px!important;"/>
+									<br/>
 
-								<div>
-									<label for="uname"><b>Email</b></label>
-									<input type="text" placeholder="Enter Email" name="uname" required>
+									<label for="email"><b>Email</b></label>
+									<input type="email" placeholder="Ketikan email Anda" name="email" required>
 
-									<label for="psw"><b>Password</b></label>
-									<input type="password" placeholder="Enter Password" name="psw" required>
+									<label for="password"><b>Password</b></label>
+									<input type="password" placeholder="Ketikan password Anda" name="password" required>
+
+									<label for="retype"><b>Retype Password</b></label>
+									<input type="password" placeholder="Ketikan email Anda lagi" name="retype" required>
+
+									<label for="fullname"><b>Full name</b></label>
+									<input type="text" placeholder="Ketikan nama lengkap Anda" name="fullname" required>
+
+									<label for="tlp"><b>no tlp</b></label>
+									<input type="text" placeholder="Ketikan nomor telepon Anda" name="tlp" required>
+
+									<label for="gender"><b>Jenis Kelamin</b></label>
+									<br/>
+									<input type="radio" name="gender" value="L"> Laki-laki<br>
+									<input type="radio" name="gender" value="P"> Perempuan<br>
+									<input type="radio" name="gender" value="O"> Lainnya
+
+									<br/>
+									<label for="ttl"><b>Tempat/tgl lahir</b></label>
+									<input type="text" placeholder="Ketikan tempat dan tanggal lahir Anda" name="ttl" required>
+
+									<label for="alamat"><b>Alamat lengkap</b></label>
+									<textarea rows="4" cols="50" name="alamat">Jln. </textarea>
+									<br/><br/>
 										
 								</div>
-								</form>
-							</div>
-							<div class="modal-footer">
-							<span style="float: left;">Already have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myLogin">Sign in</a> </span>
-							<button type="submit" class="btn btn-default" data-dismiss="modal">Submit</button>
-							</div>
+
+								<div class="modal-footer">
+								<span style="float: left;">Already have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myLogin">Sign in</a> </span>
+								<button type="submit" name="regist">Submit</button>
+								</div>
+							</form>
 						</div>
 						
 						</div>
