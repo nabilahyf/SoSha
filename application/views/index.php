@@ -28,7 +28,7 @@
 			<header class="header header--fixed">
 				<div class="container">
 					<div class="header__inner">
-						<div class="header__logo"><a href=""><img src="assets/img/logo.jpeg" width="70px" alt=""/> Social Sharing and Caring</a></div>
+						<div class="header__logo"><a href="" style="font-size: 11pt;"><img src="assets/img/logo.jpeg" width="70px" alt=""/> Social Sharing and Caring</a></div>
 						<div class="header__menu">
 							
 							<!-- onepage-nav -->
@@ -66,18 +66,20 @@
 					<div class="hero__wrapper">
 						<div class="container">
 							<div class="row">
-								<div class="col-lg-12" style="padding-top: 100px;">
-									<h4 class="hero__title">Welcome to SoSha
+								<div class="col-lg-12" style="padding-top: 80px;">
+									<h4 class="hero__title" style='color: #3f3f3f; font-size: 48pt;'>Welcome to SoSha
 										<br/>
-										<										
+																				
 										<!-- typing__module -->
-										<div class="typing__module" data-options='{"typeSpeed":60}'>
+										<div class="typing__module" data-options='{"typeSpeed":60}' style="font-size: 28pt;">
+											<
 											<div class="typed-strings"><span>Social Sharing</span><span>Social Caring</span>
 											</div><span class="typed"></span>
+											>
 										</div><!-- End / typing__module -->
-										>
+										
 									</h4>
-									<p class="hero__text">
+									<p class="hero__text" style="color: #333; margin-top: 35px;">
 										Bagikan inspirasi anda untuk mereka disini, karena takkan ada perubahan jika bukan kita sendiri yang menggerakan. 
 										
 									</p>
