@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Armando - Free Creative One Page HTML5 Template</title>
+		<title>Sosha - Social Sharing and Caring</title>
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.jpeg" />
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
@@ -27,7 +28,7 @@
 			<header class="header header--fixed">
 				<div class="container">
 					<div class="header__inner">
-						<div class="header__logo"><a href="index.html"><img src="assets/img/logo.png" alt=""/></a></div>
+						<div class="header__logo"><a href=""><img src="assets/img/logo.jpeg" width="70px" alt=""/> Social Sharing and Caring</a></div>
 						<div class="header__menu">
 							
 							<!-- onepage-nav -->
