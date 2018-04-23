@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
 		<!-- Vendors-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
 		<link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/vendors/swiper/swiper.css">
@@ -23,6 +24,7 @@
 	
 	<body>
 		<div class="page-wrap">
+		
 			
 			<!-- header -->
 			<header class="header header--fixed">
@@ -46,7 +48,7 @@
 									</li>
 									<li><a href="#id-5" style="color: #333;">Contact</a>
 									</li>
-									<li><a href="#id-6" style="color: #333;">Join Us</a>
+									<li><a href="#id-6" style="color: #333;" data-toggle="modal" data-target="#myLogin">Join Us</a>
 									</li>
 								</ul><!-- onepage-menu -->
 								
@@ -87,6 +89,79 @@
 							</div><span id="back-to-down"><i class="pe-7s-angle-down"></i></span>
 						</div>
 					</div>
+					
+					<!-- Trigger the modal with a button -->
+
+					<!-- Modal -->
+					<div class="modal fade" id="myLogin" role="dialog">
+						<div class="modal-dialog">
+						
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Sign in</h4>
+							</div>
+							<div class="modal-body">
+								<form action="/action_page.php">
+								<div class="imgcontainer">
+									<img src="assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
+								</div>
+
+								<div>
+									<label for="uname"><b>Email</b></label>
+									<input type="text" placeholder="Enter Email" name="uname" required>
+
+									<label for="psw"><b>Password</b></label>
+									<input type="password" placeholder="Enter Password" name="psw" required>
+										
+								</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+							<span style="float: left;">Don't have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUp">Sign up</a> </span>
+							<button type="submit" class="btn btn-default" data-dismiss="modal">Submit</button>
+							</div>
+						</div>
+						
+						</div>
+					</div>
+
+					<!-- Modal -->
+					<div class="modal fade" id="mySignUp" role="dialog">
+						<div class="modal-dialog">
+						
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Sign up</h4>
+							</div>
+							<div class="modal-body">
+								<form action="/action_page.php">
+								<div class="imgcontainer">
+									<img src="assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
+								</div>
+
+								<div>
+									<label for="uname"><b>Email</b></label>
+									<input type="text" placeholder="Enter Email" name="uname" required>
+
+									<label for="psw"><b>Password</b></label>
+									<input type="password" placeholder="Enter Password" name="psw" required>
+										
+								</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+							<span style="float: left;">Already have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myLogin">Sign in</a> </span>
+							<button type="submit" class="btn btn-default" data-dismiss="modal">Submit</button>
+							</div>
+						</div>
+						
+						</div>
+					</div>
+
 				</div><!-- End / hero -->
 				
 				
@@ -530,7 +605,9 @@
 			
 		</div>
 		<!-- Vendors-->
-		<script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></sc
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>ript>
 		<script type="text/javascript" src="assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
 		<script type="text/javascript" src="assets/vendors/isotope-layout/isotope.pkgd.js"></script>
 		<script type="text/javascript" src="assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
