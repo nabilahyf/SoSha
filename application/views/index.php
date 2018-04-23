@@ -119,7 +119,7 @@
 								</form>
 							</div>
 							<div class="modal-footer">
-							<span style="float: left;">Don't have an account? Sign up as <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUp">Volunteer</a> |  <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUp">only Member</a></span>
+							<span style="float: left;">Don't have an account? Sign up as <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpVolunteer">Volunteer</a> |  <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpMember">only Member</a></span>
 							<button type="submit" class="btn btn-default" data-dismiss="modal">Submit</button>
 							</div>
 						</div>
@@ -127,17 +127,17 @@
 						</div>
 					</div>
 
-					<!-- Modal Sign Up-->
-					<div class="modal fade" id="mySignUp" role="dialog">
+					<!-- Modal Sign Up Volunteer-->
+					<div class="modal fade" id="mySignUpVolunteer" role="dialog">
 						<div class="modal-dialog">
 						
 						<!-- Modal content-->
 						<div class="modal-content">
 							<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Sign up</h4>
+							<h4 class="modal-title">Sign up as volunteer</h4>
 							</div>
-							<?php echo form_open_multipart('Welcome/regist');?>
+							<?php echo form_open_multipart('Welcome/regist_volunteer');?>
 								<div class="modal-body" style="height: 435px; overflow-y: auto; padding: 20px;">
 																	
 									<label for="gambar"><b>Foto Profil</b></label>
@@ -176,7 +176,46 @@
 								</div>
 
 								<div class="modal-footer">
-								<span style="float: left;">Already have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myLogin">Sign in</a> </span>
+								<span style="float: left;">Back to <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myLogin">Sign in</a> | <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpMember">Sign up as Member</a> </span>
+								<button type="submit" name="regist">Submit</button>
+								</div>
+							</form>
+						</div>
+						
+						</div>
+					</div>
+
+					<!-- Modal Sign Up Member-->
+					<div class="modal fade" id="mySignUpMember" role="dialog">
+						<div class="modal-dialog">
+						
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Sign up as member</h4>
+							</div>
+							<?php echo form_open_multipart('Welcome/regist_member');?>
+								<div class="modal-body" style="max-height: 435px; overflow-y: auto; padding: 20px;">
+
+									<label for="email"><b>Email</b></label>
+									<input type="email" placeholder="Ketikan email Anda" name="email" required>
+
+									<label for="password"><b>Password</b></label>
+									<input type="password" placeholder="Ketikan password Anda" name="password" required>
+
+									<label for="retype"><b>Retype Password</b></label>
+									<input type="password" placeholder="Ketikan email Anda lagi" name="retype" required>
+
+									<label for="fullname"><b>Full name</b></label>
+									<input type="text" placeholder="Ketikan nama lengkap Anda" name="fullname" required>
+
+									<label for="tlp"><b>no tlp</b></label>
+									<input type="text" placeholder="Ketikan nomor telepon Anda" name="tlp" required>
+								</div>
+
+								<div class="modal-footer">
+								<span style="float: left;">Back to <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myLogin">Sign in</a> | <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpVolunteer">Sign up as Volunteer</a> </span>
 								<button type="submit" name="regist">Submit</button>
 								</div>
 							</form>

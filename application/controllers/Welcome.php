@@ -14,7 +14,7 @@ class Welcome extends CI_Controller {
 	}
 	
 
-	function regist(){	
+	function regist_volunteer(){	
 		$length 						= strlen($_FILES['gambar']['name']);
 		$config['remove_space'] 		= TRUE;
 		$file_name						= time()."_".$_FILES['gambar']['name'];
@@ -47,7 +47,31 @@ class Welcome extends CI_Controller {
 				'auth'		=> '1'
 			);    
 
-			$result = $this->M_user->registrasi($data);
+			$result = $this->M_user->registrasi_volunteer($data);
+		
+			$data = NULL;
+			if($result){			
+				redirect('Welcome');	
+			}else{			
+				redirect('Z');	
+			}
+		}
+	}
+	
+
+	function regist_member(){	
+		if(md5($this->input->post('password')) != md5($this->input->post('retype'))){
+			redirect('Y');	
+		}else{
+			$data = array(              
+				'email'		=> $this->input->post('email'),  
+				'password'	=> md5($this->input->post('password')),  
+				'full_name'	=> $this->input->post('fullname'),  
+				'no_tlp'	=> $this->input->post('tlp'),  
+				'auth'		=> '2'
+			);    
+
+			$result = $this->M_user->registrasi_member($data);
 		
 			$data = NULL;
 			if($result){			
