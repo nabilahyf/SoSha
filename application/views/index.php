@@ -36,15 +36,17 @@
 								
 								<!-- onepage-menu -->
 								<ul class="onepage-menu">
-									<li class="current-menu-item"><a href="#id-1">Home</a>
+									<li class="current-menu-item"><a href="#id-1" style="color: #333;">Home</a>
 									</li>
-									<li><a href="#id-2">About</a>
+									<li><a href="#id-2" style="color: #333;">About</a>
 									</li>
-									<li><a href="#id-3">Portfolio</a>
+									<li><a href="#id-3" style="color: #333;">Portfolio</a>
 									</li>
-									<li><a href="#id-4">Blog</a>
+									<li><a href="#id-4" style="color: #333;">Blog</a>
 									</li>
-									<li><a href="#id-5">Contact</a>
+									<li><a href="#id-5" style="color: #333;">Contact</a>
+									</li>
+									<li><a href="#id-6" style="color: #333;">Join Us</a>
 									</li>
 								</ul><!-- onepage-menu -->
 								
@@ -60,21 +62,25 @@
 			<div class="md-content">
 				
 				<!-- hero -->
-				<div class="hero" id="id-1" style="background-image: url('assets/img/bg/header.jpg');">
+				<div class="hero" id="id-1" style="background-image: url('assets/img/bg/header2.jpg');">
 					<div class="hero__wrapper">
 						<div class="container">
 							<div class="row">
-								<div class="col-lg-12 ">
-									<h4 class="hero__title">Welcome to
-										
+								<div class="col-lg-12" style="padding-top: 100px;">
+									<h4 class="hero__title">Welcome to SoSha
+										<br/>
+										<										
 										<!-- typing__module -->
 										<div class="typing__module" data-options='{"typeSpeed":60}'>
-											<div class="typed-strings"><span>SoSha</span><span>Social</span><span>Sharing</span>
+											<div class="typed-strings"><span>Social Sharing</span><span>Social Caring</span>
 											</div><span class="typed"></span>
 										</div><!-- End / typing__module -->
-										
+										>
 									</h4>
-									<p class="hero__text">Nam elit ligula, egestas et ornare non, viverra eu justo. Aliquam ornare lectus ut pharetra dictum. Aliquam erat volutpat. In fringilla erat at eros</p>
+									<p class="hero__text">
+										Bagikan inspirasi anda untuk mereka disini, karena takkan ada perubahan jika bukan kita sendiri yang menggerakan. 
+										
+									</p>
 								</div>
 							</div><span id="back-to-down"><i class="pe-7s-angle-down"></i></span>
 						</div>
