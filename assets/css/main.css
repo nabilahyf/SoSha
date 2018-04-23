@@ -2551,10 +2551,10 @@ ul {
 .mfp-iframe-holder .mfp-close:active {
     top: -40px;
 }
-
+/* 
 .mfp-zoom-in {
-    /* start state *//* animate in *//* animate out */
-}
+    start state *//* animate in *//* animate out
+} */
 
 .mfp-zoom-in .mfp-content {
     opacity: 0;
