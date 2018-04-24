@@ -626,9 +626,9 @@
 			
 		</div>
 		<!-- Vendors-->
-		<script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></sc
+		<script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>ript>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
 		<script type="text/javascript" src="assets/vendors/isotope-layout/isotope.pkgd.js"></script>
 		<script type="text/javascript" src="assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
