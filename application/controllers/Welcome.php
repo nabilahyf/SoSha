@@ -79,8 +79,13 @@ class Welcome extends CI_Controller {
 			//set seassion
 			$this->session->set_userdata($newdata);
 			redirect('Activity');
-		}		
-	}
+		}	
+	}	
+	
+		function logout(){
+			$this->session->sess_destroy();
+			redirect('Welcome');
+		}
 
 
 }

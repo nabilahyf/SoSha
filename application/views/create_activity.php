@@ -31,7 +31,9 @@
 			<header class="header " style="box-shadow: 0 4px 2px -2px #ccc;">
 				<div class="container">
 					<div class="header__inner">
-						<div class="header__logo"><a href="" style="font-size: 11pt;"><img src="assets/img/logo.jpeg" width="70px" alt=""/> Social Sharing and Caring</a></div>
+						<div class="header__logo"><a href="" style="font-size: 11.5pt;">
+                            <img src="<?php echo base_url().'profile/'.$foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
+                            &emsp; <?php echo "Welcome <i style='color: #999;'>".$full_name."</i>"; ?></a></div>
 						<div class="header__menu">
 							
 							<!-- onepage-nav -->
@@ -47,9 +49,7 @@
 									</li>
 									<li><a href="#id-4" style="color: #333;">Blog</a>
 									</li>
-									<li><a href="#id-5" style="color: #333;">Contact</a>
-									</li>
-									<li><img src="<?php echo base_url().'profile/1524510972_me.jpg'; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;">
+									<li><a href="<?php echo base_url('Welcome/logout');?>" style="color: red;">Logout</a>
 									</li>
 								</ul><!-- onepage-menu -->
 								
@@ -69,14 +69,14 @@
                             <div class="panel-title">Create an Activity</div>
                         </div>  
                         <div class="panel-body" >
-                            <form id="signupform" class="form-horizontal" role="form">
+                        <?php echo form_open_multipart('Activity/create');?>
+                            <div id="signupform" class="form-horizontal" role="form">
                                 
                                 <div id="signupalert" style="display:none" class="alert alert-danger">
                                     <p>Error:</p>
                                     <span></span>
                                 </div>
-                                    
-                                
+
                                   
                                 <div class="form-group" style="margin-left: 50px!important;">
                                     <label>Add Picture</label>
@@ -122,10 +122,11 @@
                                 <div class="form-group">
                                     <!-- Button -->                                        
                                     <div class="col-md-offset-3 col-md-9">
-                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp; Sign Up</button>
+                                        <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp; Submit</button>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
+                        </form>
                          </div>
                     </div>
                 </div> 
