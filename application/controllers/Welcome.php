@@ -58,30 +58,6 @@ class Welcome extends CI_Controller {
 		}
 	}
 	
-
-	function regist_member(){	
-		if(md5($this->input->post('password')) != md5($this->input->post('retype'))){
-			redirect('Y');	
-		}else{
-			$data = array(              
-				'email'		=> $this->input->post('email'),  
-				'password'	=> md5($this->input->post('password')),  
-				'full_name'	=> $this->input->post('fullname'),  
-				'no_tlp'	=> $this->input->post('tlp'),  
-				'auth'		=> '2'
-			);    
-
-			$result = $this->M_user->registrasi_member($data);
-		
-			$data = NULL;
-			if($result){			
-				redirect('Welcome');	
-			}else{			
-				redirect('Z');	
-			}
-		}
-	}
-
 	function login(){
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
