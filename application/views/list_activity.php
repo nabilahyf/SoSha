@@ -41,9 +41,9 @@
 								
 								<!-- onepage-menu -->
 								<ul class="onepage-menu">
-									<li><a href="<?php echo base_url('Activity');?>" style="color: #333;">List Activity</a>
+									<li class="current-menu-item"><a href="<?php echo base_url('Activity');?>" style="color: #333;">List Activity</a>
 									</li>
-									<li class="current-menu-item"><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
+									<li><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>
 									<li><a href="#id-3" style="color: #333;">Joined</a>
 									</li>
@@ -61,73 +61,7 @@
 
 
             <div class="container" style="padding-bottom: 50px;">   
-                <div id="signupbox" style="margin-top:30px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <div class="panel-title">Create an Activity</div>
-                        </div>  
-                        <div class="panel-body" >
-                        <?php echo form_open_multipart('Activity/create');?>
-                            <div id="signupform" class="form-horizontal" role="form">
-                                
-                                <div id="signupalert" style="display:none" class="alert alert-danger">
-                                    <p>Error:</p>
-                                    <span></span>
-                                </div>
-
-                                  
-                                <div class="form-group" style="margin-left: 50px!important;">
-                                    <label>Add Picture</label>
-                                    <div class="input-group">
-                                        <span class="input-group-btn">
-                                            <span class="btn btn-default btn-file">
-                                                Browse… <input name="picture" type="file" id="imgInp">
-                                            </span>
-                                        </span>
-                                        <input id='urlname' type="text" style="height: 34px!important; width: 79%" readonly>
-                                <button id="clear" class="btn btn-default">Clear</button>
-                                    </div>
-                                    <img id='img-upload'/>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="title" class="col-md-3 control-label">Title</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" name="title">
-                                    </div>
-                                </div>
-                                    
-                                <div class="form-group">
-                                    <label for="date" class="col-md-3 control-label">Date</label>
-                                    <div class="col-md-9">
-                                        <input type="date" class="form-control" name="date">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="location" class="col-md-3 control-label">Location</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" name="location">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="description" class="col-md-3 control-label">Description</label>
-                                    <div class="col-md-9">
-                                        <textarea name="description" rows="50" cols="50"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <!-- Button -->                                        
-                                    <div class="col-md-offset-3 col-md-9">
-                                        <button id="btn-signup" type="submit" name="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp; Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                         </div>
-                    </div>
-                </div> 
+                
             </div>
     
 			
