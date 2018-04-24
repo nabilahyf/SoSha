@@ -82,8 +82,7 @@
 										
 									</h4>
 									<p class="hero__text" style="margin-top: 35px;">
-										Bagikan inspirasi anda untuk mereka disini, karena takkan ada perubahan jika bukan kita sendiri yang menggerakan. 
-										
+										Bagikan kebahagiaan untuk sesama.
 									</p>
 								</div>
 							</div><span id="back-to-down"><i class="pe-7s-angle-down"></i></span>
@@ -237,22 +236,12 @@
 									<!-- swiper__module swiper-container -->
 									<div class="swiper__module swiper-container slide-image__front" data-options='{"slidesPerView":1,"spaceBetween":0}'>
 										<div class="swiper-wrapper">
-											<div class="slide-item" style="background-image: url('assets/img/about/1.jpg');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/2.jpg');"></div>
+											<div class="slide-item" style="background-image: url('assets/img/about/SoSha1.jpg');"></div>
+											<div class="slide-item" style="background-image: url('assets/img/about/SoSha2.jpg');"></div>
 											<div class="slide-item" style="background-image: url('assets/img/about/3.jpg');"></div>
 										</div>
 										<div class="swiper-pagination-custom"></div>
-									</div><!-- End / swiper__module swiper-container -->
-									
-									
-									<!-- swiper-thumbnails__module swiper-container -->
-									<div class="swiper-thumbnails__module swiper-container slide-image__black" data-options='{"slidesPerView":1,"spaceBetween":0,"delay":10000}'>
-										<div class="swiper-wrapper">
-											<div class="slide-item" style="background-image: url('assets/img/about/1b.jpg');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/2b.jpg');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/3b.jpg');"></div>
-										</div>
-									</div><!-- End / swiper-thumbnails__module swiper-container -->
+									</div><!-- End / swiper__module swiper-container -->							
 									
 								</div><!-- End / slide-image -->
 								
@@ -261,95 +250,14 @@
 								
 								<!-- title -->
 								<div class="title">
-									<h2 class="title__title">Hello from Armando</h2>
+									<h2 class="title__title">Social Sharing and Caring</h2>
 								</div><!-- End / title -->
 								
-								<p class="fz-16">Duis porttitor libero ac egestas euismod. Maecenas quis felis turpis. Nulla quis turpis sed augue</p>
-								<p class="fz-16">Curabitur elementum urna augue, eu porta purus gravida in. Cras consectetur, lorem a cursus vestibulum, ligula purus iaculis nulla, in dignissim risus turpis id justo. Sed eleifend ante et ligula eleifend ultricies. Fusce porta feugiat nisl, eget faucibus augue ultrices et. Nullam id leo fringilla,</p>
+								<p class="fz-16">Social Sharing and Caring adalah wadah atau tempat untuk berbagi kepada saudara-saudara kita yang memerlukan bantuan. Bantuan yang diberikan bisa berupa jasa, barang maupun uang.</p>
+								<p class="fz-16">Tujuan dibuatnya Social Sharing and Caring untuk mengupulkan para volunteer serta mengadakan kegiatan kemanusiaan, upaya-upaya memberikan sesuatu seperti barang dan jasa.
+												  Dalam hal ini SoSha dapat menyadarkan kepada masyarakat pentingnya berbagi kepada sesama.</p>
 							</div>
 						</div>
-						
-						<!-- swiper__module swiper-container -->
-						<div class="swiper__module swiper-container mt-50" data-options='{"slidesPerView":3,"spaceBetween":30,"autoplay":2000,"breakpoints":{"640":{"slidesPerView":1},"991":{"slidesPerView":2}}}'>
-							<div class="swiper-wrapper">
-								
-								<!-- service -->
-								<div class="service mb-0">
-									<div class="service__icon"><i class="pe-7s-paint-bucket"></i></div>
-									<h3 class="service__title">Social Media</h3>
-									<p class="service__text">Suspendisse ac elit vitae est lacinia interdum eu sit amet mauris. Phasellus</p>
-								</div><!-- End / service -->
-								
-								
-								<!-- service -->
-								<div class="service mb-0">
-									<div class="service__icon"><i class="pe-7s-paint-bucket"></i></div>
-									<h3 class="service__title">Social Media</h3>
-									<p class="service__text">Integer placerat ullamcorper urna nec rhoncus. Sed velit justo, lacinia non</p>
-								</div><!-- End / service -->
-								
-								
-								<!-- service -->
-								<div class="service mb-0">
-									<div class="service__icon"><i class="pe-7s-lintern"></i></div>
-									<h3 class="service__title">Investment Planning</h3>
-									<p class="service__text">Mauris lacinia venenatis dolor sit amet viverra. Integer malesuada nulla neque.</p>
-								</div><!-- End / service -->
-								
-								
-								<!-- service -->
-								<div class="service mb-0">
-									<div class="service__icon"><i class="pe-7s-gleam"></i></div>
-									<h3 class="service__title">Risk Management</h3>
-									<p class="service__text">Curabitur elementum urna augue, eu porta purus gravida in. Cras consectetur,</p>
-								</div><!-- End / service -->
-								
-								
-								<!-- service -->
-								<div class="service mb-0">
-									<div class="service__icon"><i class="pe-7s-anchor"></i></div>
-									<h3 class="service__title">Marketing Planning</h3>
-									<p class="service__text">Duis porttitor libero ac egestas euismod. Maecenas quis felis turpis. Nulla quis</p>
-								</div><!-- End / service -->
-								
-								
-								<!-- service -->
-								<div class="service mb-0">
-									<div class="service__icon"><i class="pe-7s-refresh"></i></div>
-									<h3 class="service__title">Site Security</h3>
-									<p class="service__text">Etiam non varius justo, vel tempor mi. Nulla facilisi. Fusce at tortor arcu.</p>
-								</div><!-- End / service -->
-								
-								
-								<!-- service -->
-								<div class="service mb-0">
-									<div class="service__icon"><i class="pe-7s-joy"></i></div>
-									<h3 class="service__title">Risk Management</h3>
-									<p class="service__text">Integer placerat ullamcorper urna nec rhoncus. Sed velit justo, lacinia non</p>
-								</div><!-- End / service -->
-								
-								
-								<!-- service -->
-								<div class="service mb-0">
-									<div class="service__icon"><i class="pe-7s-lock"></i></div>
-									<h3 class="service__title">Investment Planning</h3>
-									<p class="service__text">Mauris lacinia venenatis dolor sit amet viverra. Integer malesuada nulla neque.</p>
-								</div><!-- End / service -->
-								
-								
-								<!-- service -->
-								<div class="service mb-0">
-									<div class="service__icon"><i class="pe-7s-magnet"></i></div>
-									<h3 class="service__title">Site Security</h3>
-									<p class="service__text">Nam elit ligula, egestas et ornare non, viverra eu justo. Aliquam ornare lectus</p>
-								</div><!-- End / service -->
-								
-							</div>
-						</div><!-- End / swiper__module swiper-container -->
-						
-					</div>
-				</section>
-				<!-- End / Section -->
 				
 				
 				<!-- Section -->
