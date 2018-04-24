@@ -236,9 +236,9 @@
 									<!-- swiper__module swiper-container -->
 									<div class="swiper__module swiper-container slide-image__front" data-options='{"slidesPerView":1,"spaceBetween":0}'>
 										<div class="swiper-wrapper">
+											<div class="slide-item" style="background-image: url('assets/img/about/SoSha3.jpg');"></div>
+											<div class="slide-item" style="background-image: url('assets/img/about/SoSha2.png');"></div>
 											<div class="slide-item" style="background-image: url('assets/img/about/SoSha1.jpg');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/SoSha2.jpg');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/3.jpg');"></div>
 										</div>
 										<div class="swiper-pagination-custom"></div>
 									</div><!-- End / swiper__module swiper-container -->							
