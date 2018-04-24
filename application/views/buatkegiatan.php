@@ -353,7 +353,7 @@
 				<!-- Section -->
 				<section class="md-section bg-gray" id="id-4">
 					<div class="container" style="padding-top:5%" >
-					<h1 style="padding-bottom:1%; padding-left:1.3%" > Buat Kegiatan </h1>
+					<h1 style="padding-bottom:1%; padding-left:1.3%" > Buat Kegiatan</h1>
 						<form class="col-md-6">
 						<div class="form-group">
 							<input type="text" placeholder="Isikan Nama Kegiatan" name="namakegiatan" required>
