@@ -12,9 +12,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
-	public function home()
+	public function buatkegiatan()
 	{
-		$this->load->view('home');
+		$this->load->view('buatkegiatan');
 	}
 	
 
