@@ -12,6 +12,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
+	public function home()
+	{
+		$this->load->view('home');
+	}
 	
 
 	function regist_volunteer(){	
