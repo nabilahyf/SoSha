@@ -319,7 +319,7 @@
 								
 								<!-- title -->
 								<div class="title">
-									<h2 class="title__title">portfolio</h2>
+									<h2 class="title__title">Article</h2>
 								</div><!-- End / title -->
 								
 							</div>
