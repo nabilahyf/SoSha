@@ -371,14 +371,14 @@
 				
 				
 				<!-- Section -->
-				<section class="md-section" id="id-5">
+				<section class="md-section" id="id-4">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4 ">
 								
 								<!-- title -->
 								<div class="title">
-									<h2 class="title__title">Get in touch</h2>
+									<h2 class="title__title">Contact Us</h2>
 								</div><!-- End / title -->
 								
 								<div class="mb-40">
@@ -386,21 +386,21 @@
 									<!-- contact -->
 									<div class="contact">
 										<h3 class="contact__title">address</h3>
-										<div>Division No. 10, Subd. D, Newfoundland and Labrador, Canada</div>
+										<div>Jalan Ciledug Raya Blok Haji Haisin No.22, Petukangan Utara, Pesanggrahan, Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12260</div>
 									</div><!-- End / contact -->
 									
 									
 									<!-- contact -->
 									<div class="contact">
 										<h3 class="contact__title">email</h3>
-										<div><a href="">info@awe7.com</a></div>
+										<div><a href="">www.x.com</a></div>
 									</div><!-- End / contact -->
 									
 									
 									<!-- contact -->
 									<div class="contact">
 										<h3 class="contact__title">phone</h3>
-										<div>+61 1900 654 321</div>
+										<div>0812 xxx xxx </div>
 									</div><!-- End / contact -->
 									
 								</div>
