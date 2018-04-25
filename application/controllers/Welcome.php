@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
-		$this->load->helper("file");
 		$this->load->model('M_user'); 
 	}
 
@@ -47,8 +46,7 @@ class Welcome extends CI_Controller {
 				'alamat'	=> $this->input->post('alamat'), 
 				'no_tlp'	=> $this->input->post('tlp'),  
 				'jenkel'	=> $this->input->post('gender'),   
-				'birthday'	=> $this->input->post('ttl'),
-				'auth'		=> '1'
+				'birthday'	=> $this->input->post('ttl')
 			);    
 
 			$result = $this->M_user->registrasi_volunteer($data);
@@ -62,30 +60,6 @@ class Welcome extends CI_Controller {
 		}
 	}
 	
-
-	function regist_member(){	
-		if(md5($this->input->post('password')) != md5($this->input->post('retype'))){
-			redirect('Y');	
-		}else{
-			$data = array(              
-				'email'		=> $this->input->post('email'),  
-				'password'	=> md5($this->input->post('password')),  
-				'full_name'	=> $this->input->post('fullname'),  
-				'no_tlp'	=> $this->input->post('tlp'),  
-				'auth'		=> '2'
-			);    
-
-			$result = $this->M_user->registrasi_member($data);
-		
-			$data = NULL;
-			if($result){			
-				redirect('Welcome');	
-			}else{			
-				redirect('Z');	
-			}
-		}
-	}
-
 	function login(){
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
@@ -103,15 +77,19 @@ class Welcome extends CI_Controller {
 				'alamat'		=> $checkEmail->alamat,
 				'no_tlp'		=> $checkEmail->no_tlp,
 				'jenkel'		=> $checkEmail->jenkel,
-				'birthday'		=> $checkEmail->birthday,
-				'auth'			=> $checkEmail->auth
+				'birthday'		=> $checkEmail->birthday
 
 			  );
 			//set seassion
 			$this->session->set_userdata($newdata);
+			redirect('Activity');
+		}	
+	}	
+	
+		function logout(){
+			$this->session->sess_destroy();
 			redirect('Welcome');
-		}		
-	}
+		}
 
 
 }
