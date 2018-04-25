@@ -80,7 +80,7 @@
 										
 									</h4>
 									<p class="hero__text" style="margin-top: 35px;">
-										Bagikan inspirasi anda untuk mereka disini, karena takkan ada perubahan jika bukan kita sendiri yang menggerakan. 
+										Ayo berbagi kebahagiaan kepada sesama.  
 										
 									</p>
 								</div>
