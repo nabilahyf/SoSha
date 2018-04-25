@@ -150,7 +150,7 @@
 									<input type="password" placeholder="Ketikan password Anda" name="password" required>
 
 									<label for="retype"><b>Retype Password</b></label>
-									<input type="password" placeholder="Ketikan email Anda lagi" name="retype" required>
+									<input type="password" placeholder="Ketikan password Anda lagi" name="retype" required>
 
 									<label for="fullname"><b>Full name</b></label>
 									<input type="text" placeholder="Ketikan nama lengkap Anda" name="fullname" required>

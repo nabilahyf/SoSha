@@ -31,7 +31,7 @@
 			<header class="header " style="box-shadow: 0 4px 2px -2px #ccc;">
 				<div class="container">
 					<div class="header__inner">
-						<div class="header__logo"><a href="" style="font-size: 11.5pt;">
+						<div class="header__logo"><a href="<?php echo base_url('Activity/profile');?>" style="font-size: 11.5pt;">
                             <img src="<?php echo base_url().'profile/'.$foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
                             &emsp; <?php echo "Welcome <i style='color: #999;'>".$full_name."</i>"; ?></a></div>
 						<div class="header__menu">

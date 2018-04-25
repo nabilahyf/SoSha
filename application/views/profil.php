@@ -59,11 +59,41 @@
 				</div>
 			</header><!-- End / header -->
 
-
+			
             <div class="container" style="padding-bottom: 50px;">   
-                
-            </div>
-    
+				<div class="row">
+						<div class="span2" style="padding-top: 5%;" "padding-left: 5%;">
+						<img src="<?php echo base_url().'profile/'.$foto; ?>"  alt="" class="col-md-3">
+					</div>
+					<div class="col-md-3">
+							<p>
+							<b>Nama</b>
+							<text src="<?php echo base_url().'profile/'.$full_name; ?>" >
+							</p>
+							<p>
+							<b>Email</b>
+							<text src="<?php echo base_url().'profile/'.$email; ?>" >
+							</p>
+							<p>
+							<b>Alamat</b>
+							<text src="<?php echo base_url().'profile/'.$alamat; ?>" >
+							</p>
+							<p>
+							<b>No Telepon</b>
+							<text src="<?php echo base_url().'profile/'.$no_tlp; ?>" >
+							</p>
+							<p>
+							<b>Jenis Kelamin</b>
+							<text src="<?php echo base_url().'profile/'.$jenkel; ?>" >
+							</p>
+							<p>
+							<b>Tempat & Tanggal Lahir</b>
+							<text src="<?php echo base_url().'profile/'.$birthday; ?>" >
+							</p>
+					</div>
+				</div>
+			</div>
+          
 			
 			<!-- footer -->
 			<div class="footer">
