@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Sosha - Social Sharing and Caring</title>
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.jpeg" />
+		<title>SoSha - Social Sharing</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<!-- Fonts-->
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/fonts/fontawesome/font-awesome.min.css'; ?>">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/fonts/pe-icon/pe-icon.css'; ?>">
+		<link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
 		<!-- Vendors-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/vendors/bootstrap/grid.css'; ?>">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/vendors/magnific-popup/magnific-popup.min.css'; ?>">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/vendors/swiper/swiper.css'; ?>">
+		<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
+		<link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/vendors/swiper/swiper.css">
 		<!-- App & fonts-->
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/main.css'; ?>">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/upload.cs'; ?>s"><!--[if lt IE 9]>        
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 	
 	<body>
 		<div class="page-wrap">
-		
 			
 			<!-- header -->
 			<header class="header header--fixed">
 				<div class="container">
 					<div class="header__inner">
-						<div class="header__logo"><a href="" style="font-size: 11pt;"><img src="<?php echo base_url().'assets/img/logo.jpeg'; ?>" width="70px" alt=""/> Social Sharing and Caring</a></div>
+						<div class="header__logo"><a href="index.html"><img src="assets/img/logo.png" alt=""/></a></div>
 						<div class="header__menu">
 							
 							<!-- onepage-nav -->
@@ -39,17 +35,17 @@
 								
 								<!-- onepage-menu -->
 								<ul class="onepage-menu">
-									<li class="current-menu-item"><a href="#id-1" style="color: #333;">Home</a>
+									<li class="current-menu-item"><a href="#id-1">Home</a>
 									</li>
-									<li><a href="#id-2" style="color: #333;">About</a>
+									<li><a href="#id-2">About</a>
 									</li>
-									<li><a href="#id-3" style="color: #333;">Portfolio</a>
+									<li><a href="#id-3">Article</a>
 									</li>
-									<li><a href="#id-4" style="color: #333;">Blog</a>
+									<li><a href="#id-4">Team</a>
 									</li>
-									<li><a href="#id-5" style="color: #333;">Contact</a>
+									<li><a href="#id-5">Contact</a>
 									</li>
-									<li><a href="#id-6" style="color: #333;" data-toggle="modal" data-target="#myLogin">Join Us</a>
+									<li><a href="#id-6">Login</a>
 									</li>
 								</ul><!-- onepage-menu -->
 								
@@ -65,124 +61,25 @@
 			<div class="md-content">
 				
 				<!-- hero -->
-				<div class="hero" id="id-1" style="background-image: url('/SoSha/assets/img/bg/header2.jpg');">
+				<div class="hero" id="id-1" style="background-image: url('assets/img/bg/header.jpg');">
 					<div class="hero__wrapper">
 						<div class="container">
 							<div class="row">
-								<div class="col-lg-12" style="padding-top: 80px;">
-									<h4 class="hero__title" style='font-size: 48pt;'>Welcome to SoSha
-										<br/>
-																				
+								<div class="col-lg-12 ">
+									<h4 class="hero__title">Welcome to
+										
 										<!-- typing__module -->
-										<div class="typing__module" data-options='{"typeSpeed":60}' style="font-size: 28pt;">
-											<
-											<div class="typed-strings"><span>Social Sharing</span><span>Social Caring</span>
+										<div class="typing__module" data-options='{"typeSpeed":60}'>
+											<div class="typed-strings"><span>SoSha</span><span>Social</span><span>Sharing</span>
 											</div><span class="typed"></span>
-											>
 										</div><!-- End / typing__module -->
 										
 									</h4>
-									<p class="hero__text" style="margin-top: 35px;">
-										Bagikan kebahagiaan untuk sesama.
-									</p>
+									<p class="hero__text">Selamat Datang di Website SoSha</p>
 								</div>
 							</div><span id="back-to-down"><i class="pe-7s-angle-down"></i></span>
 						</div>
 					</div>
-					
-					<!-- Trigger the modal with a button -->
-
-					<!-- Modal Log in-->
-					<div class="modal fade" id="myLogin" role="dialog">
-						<div class="modal-dialog">
-						
-						<!-- Modal content-->
-						<div class="modal-content">
-							<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Sign in</h4>
-							</div>
-							<div class="modal-body">
-							<?php echo form_open_multipart('Welcome/login');?>
-								<div class="imgcontainer">
-									<img src="assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
-								</div>
-
-									<label for="email"><b>Email</b></label>
-									<input type="text" placeholder="Enter Email" name="email" required>
-
-									<label for="password"><b>Password</b></label>
-									<input type="password" placeholder="Enter Password" name="password" required>
-										
-									<div class="modal-footer">
-									<span style="float: left;">Don't have an account? Sign up as <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#mySignUpVolunteer">Volunteer</a></span>
-									<button type="submit" name="login" class="btn btn-default">Submit</button>
-									</div>
-								</form>
-							</div>
-						</div>
-						
-						</div>
-					</div>
-
-					<!-- Modal Sign Up Volunteer-->
-					<div class="modal fade" id="mySignUpVolunteer" role="dialog">
-						<div class="modal-dialog">
-						
-						<!-- Modal content-->
-						<div class="modal-content">
-							<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Registration</h4>
-							</div>
-							<?php echo form_open_multipart('Welcome/regist_volunteer');?>
-								<div class="modal-body" style="height: 435px; overflow-y: auto; padding: 20px;">
-																	
-									<label for="gambar"><b>Foto Profil</b></label>
-									<input type="file" name="gambar" class="form-control-file" id="exampleFormControlFile1" style="border-width: 0px!important;"/>
-									<br/>
-
-									<label for="email"><b>Email</b></label>
-									<input type="email" placeholder="Ketikan email Anda" name="email" required>
-
-									<label for="password"><b>Password</b></label>
-									<input type="password" placeholder="Ketikan password Anda" name="password" required>
-
-									<label for="retype"><b>Retype Password</b></label>
-									<input type="password" placeholder="Ketikan email Anda lagi" name="retype" required>
-
-									<label for="fullname"><b>Full name</b></label>
-									<input type="text" placeholder="Ketikan nama lengkap Anda" name="fullname" required>
-
-									<label for="tlp"><b>no tlp</b></label>
-									<input type="text" placeholder="Ketikan nomor telepon Anda" name="tlp" required>
-
-									<label for="gender"><b>Jenis Kelamin</b></label>
-									<br/>
-									<input type="radio" name="gender" value="L"> Laki-laki<br>
-									<input type="radio" name="gender" value="P"> Perempuan<br>
-									<input type="radio" name="gender" value="O"> Lainnya
-
-									<br/>
-									<label for="ttl"><b>Tempat/tgl lahir</b></label>
-									<input type="text" placeholder="Ketikan tempat dan tanggal lahir Anda" name="ttl" required>
-
-									<label for="alamat"><b>Alamat lengkap</b></label>
-									<textarea rows="4" cols="50" name="alamat">Jln. </textarea>
-									<br/><br/>
-										
-								</div>
-
-								<div class="modal-footer">
-								<span style="float: left;">Back to <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myLogin">Sign in</a></span>
-								<button type="submit" name="regist_volunteer" class="btn btn-default">Submit</button>
-								</div>
-							</form>
-						</div>
-						
-						</div>
-					</div>
-
 				</div><!-- End / hero -->
 				
 				
@@ -198,12 +95,15 @@
 									<!-- swiper__module swiper-container -->
 									<div class="swiper__module swiper-container slide-image__front" data-options='{"slidesPerView":1,"spaceBetween":0}'>
 										<div class="swiper-wrapper">
-											<div class="slide-item" style="background-image: url('assets/img/about/SoSha3.jpg');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/SoSha2.png');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/SoSha1.jpg');"></div>
+											<div class="slide-item" style="background-image: url('assets/img/about/a.jpg');"></div>
+											<div class="slide-item" style="background-image: url('assets/img/about/b.jpg');"></div>
+											<div class="slide-item" style="background-image: url('assets/img/about/c.jpg');"></div>
 										</div>
 										<div class="swiper-pagination-custom"></div>
-									</div><!-- End / swiper__module swiper-container -->							
+									</div><!-- End / swiper__module swiper-container -->
+									
+									
+									
 									
 								</div><!-- End / slide-image -->
 								
@@ -212,14 +112,19 @@
 								
 								<!-- title -->
 								<div class="title">
-									<h2 class="title__title">Social Sharing and Caring</h2>
+									<h2 class="title__title">SoSha - Social Sharing and Caring</h2>
 								</div><!-- End / title -->
 								
-								<p class="fz-16">Social Sharing and Caring adalah wadah atau tempat untuk berbagi kepada saudara-saudara kita yang memerlukan bantuan. Bantuan yang diberikan bisa berupa jasa, barang maupun uang.</p>
-								<p class="fz-16">Tujuan dibuatnya Social Sharing and Caring untuk mengupulkan para volunteer serta mengadakan kegiatan kemanusiaan, upaya-upaya memberikan sesuatu seperti barang dan jasa.
-												  Dalam hal ini SoSha dapat menyadarkan kepada masyarakat pentingnya berbagi kepada sesama.</p>
+								<p class="fz-16">Website ini merupakan wadah untuk mengumpulkan para volunteer yang ingin membantu orang yang membutuhkan</p>
+								<p class="fz-16">Dengan adanya website ini, kami harapkan bisa memberikan sedekah kepada yang lebih membutuhkan, yang nantinya para volunteer bisa berkumpul bersama mengadakan kegiatan yang bermanfaat.</p>
 							</div>
 						</div>
+						
+						
+						
+					</div>
+				</section>
+				<!-- End / Section -->
 				
 				
 				<!-- Section -->
@@ -230,7 +135,7 @@
 								
 								<!-- title -->
 								<div class="title">
-									<h2 class="title__title">portfolio</h2>
+									<h2 class="title__title">article</h2>
 								</div><!-- End / title -->
 								
 							</div>
@@ -239,9 +144,7 @@
 							<div class="filter">
 								<ul class="filter__list">
 									<li><a href="#" data-filter="*">All</a></li>
-									<li><a href="#" data-filter=".cat1">Web design</a></li>
-									<li><a href="#" data-filter=".cat2">Applications</a></li>
-									<li><a href="#" data-filter=".cat3">Development</a></li>
+							
 								</ul>
 							</div>
 							<div class="grid__inner">
@@ -251,7 +154,7 @@
 										<div class="grid-item__content-wrapper">
 											
 											<!-- portfolio -->
-											<div class="portfolio" href="https://www.youtube.com/watch?v=XNqn4gEakQA"><a class="portfolio__bg popup-video" href="https://www.youtube.com/watch?v=XNqn4gEakQA" style="background-image: url('/SoSha/assets/img/portfolio/1.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/1.jpg"/>
+											<div class="portfolio" href="https://www.youtube.com/watch?v=XNqn4gEakQA"><a class="portfolio__bg popup-video" href="https://www.youtube.com/watch?v=XNqn4gEakQA" style="background-image: url('assets/img/portfolio/1.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/1.jpg"/>
 													<div class="portfolio__icon"><i class="fa fa-play"></i></div></a>
 											</div><!-- End / portfolio -->
 											
@@ -263,7 +166,7 @@
 										<div class="grid-item__content-wrapper">
 											
 											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/2.jpg"><a class="portfolio__bg" href="assets/img/portfolio/2.jpg" style="background-image: url('/SoSha/assets/img/portfolio/2.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/2.jpg"/></a>
+											<div class="portfolio" href="assets/img/portfolio/2.jpg"><a class="portfolio__bg" href="assets/img/portfolio/2.jpg" style="background-image: url('assets/img/portfolio/2.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/2.jpg"/></a>
 											</div><!-- End / portfolio -->
 											
 										</div>
@@ -274,7 +177,7 @@
 										<div class="grid-item__content-wrapper">
 											
 											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/3.jpg"><a class="portfolio__bg" href="assets/img/portfolio/3.jpg" style="background-image: url('/SoSha/assets/img/portfolio/3.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/3.jpg"/></a>
+											<div class="portfolio" href="assets/img/portfolio/3.jpg"><a class="portfolio__bg" href="assets/img/portfolio/3.jpg" style="background-image: url('assets/img/portfolio/3.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/3.jpg"/></a>
 											</div><!-- End / portfolio -->
 											
 										</div>
@@ -285,7 +188,7 @@
 										<div class="grid-item__content-wrapper">
 											
 											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/4.jpg"><a class="portfolio__bg" href="assets/img/portfolio/4.jpg" style="background-image: url('/SoSha/assets/img/portfolio/4.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/4.jpg"/></a>
+											<div class="portfolio" href="assets/img/portfolio/4.jpg"><a class="portfolio__bg" href="assets/img/portfolio/4.jpg" style="background-image: url('assets/img/portfolio/4.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/4.jpg"/></a>
 											</div><!-- End / portfolio -->
 											
 										</div>
@@ -296,7 +199,7 @@
 										<div class="grid-item__content-wrapper">
 											
 											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/5.jpg"><a class="portfolio__bg" href="assets/img/portfolio/5.jpg" style="background-image: url('/SoSha/assets/img/portfolio/5.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/5.jpg"/></a>
+											<div class="portfolio" href="assets/img/portfolio/5.jpg"><a class="portfolio__bg" href="assets/img/portfolio/5.jpg" style="background-image: url('assets/img/portfolio/5.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/5.jpg"/></a>
 											</div><!-- End / portfolio -->
 											
 										</div>
@@ -307,7 +210,7 @@
 										<div class="grid-item__content-wrapper">
 											
 											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/6.jpg"><a class="portfolio__bg" href="assets/img/portfolio/6.jpg" style="background-image: url('/SoSha/assets/img/portfolio/6.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/6.jpg"/></a>
+											<div class="portfolio" href="assets/img/portfolio/6.jpg"><a class="portfolio__bg" href="assets/img/portfolio/6.jpg" style="background-image: url('assets/img/portfolio/6.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/6.jpg"/></a>
 											</div><!-- End / portfolio -->
 											
 										</div>
@@ -318,7 +221,7 @@
 										<div class="grid-item__content-wrapper">
 											
 											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/7.jpg"><a class="portfolio__bg" href="assets/img/portfolio/7.jpg" style="background-image: url('/SoSha/assets/img/portfolio/7.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/7.jpg"/></a>
+											<div class="portfolio" href="assets/img/portfolio/7.jpg"><a class="portfolio__bg" href="assets/img/portfolio/7.jpg" style="background-image: url('assets/img/portfolio/7.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/7.jpg"/></a>
 											</div><!-- End / portfolio -->
 											
 										</div>
@@ -329,7 +232,7 @@
 										<div class="grid-item__content-wrapper">
 											
 											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/8.jpg"><a class="portfolio__bg" href="assets/img/portfolio/8.jpg" style="background-image: url('/SoSha/assets/img/portfolio/8.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/8.jpg"/></a>
+											<div class="portfolio" href="assets/img/portfolio/8.jpg"><a class="portfolio__bg" href="assets/img/portfolio/8.jpg" style="background-image: url('assets/img/portfolio/8.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/8.jpg"/></a>
 											</div><!-- End / portfolio -->
 											
 										</div>
@@ -340,7 +243,7 @@
 										<div class="grid-item__content-wrapper">
 											
 											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/9.jpg"><a class="portfolio__bg" href="assets/img/portfolio/9.jpg" style="background-image: url('/SoSha/assets/img/portfolio/9.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/9.jpg"/></a>
+											<div class="portfolio" href="assets/img/portfolio/9.jpg"><a class="portfolio__bg" href="assets/img/portfolio/9.jpg" style="background-image: url('assets/img/portfolio/9.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/9.jpg"/></a>
 											</div><!-- End / portfolio -->
 											
 										</div>
@@ -528,28 +431,25 @@
 										</a><!-- End / social-icon -->
 										
 						</div>
-						<p class="footer__copy">2018 &copy; Copyright SoSha. All rights Reserved.</p>
+						<p class="footer__copy">2018 &copy; Copyright Awe7. All rights Reserved.</p>
 					</div>
 				</div>
 			</div><!-- End / footer -->
-
+			
 		</div>
 		<!-- Vendors-->
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/jquery/jquery.min.js'; ?>"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/imagesloaded/imagesloaded.pkgd.js'; ?>"></script>
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/isotope-layout/isotope.pkgd.js'; ?>"></script>
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/jquery-one-page/jquery.nav.min.js'; ?>"></script>
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/jquery.easing/jquery.easing.min.js'; ?>"></script>
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js'; ?>"></script>
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/magnific-popup/jquery.magnific-popup.min.js'; ?>"></script>
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/masonry-layout/masonry.pkgd.js'; ?>"></script>
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/swiper/swiper.jquery.js'; ?>"></script>
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/menu/menu.js'; ?>"></script>
-		<script type="text/javascript" src="<?php echo base_url().'assets/vendors/typed/typed.min.js'; ?>"></script>
+		<script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
+		<script type="text/javascript" src="assets/vendors/isotope-layout/isotope.pkgd.js"></script>
+		<script type="text/javascript" src="assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
+		<script type="text/javascript" src="assets/vendors/jquery.easing/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script>
+		<script type="text/javascript" src="assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="assets/vendors/masonry-layout/masonry.pkgd.js"></script>
+		<script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
+		<script type="text/javascript" src="assets/vendors/menu/menu.js"></script>
+		<script type="text/javascript" src="assets/vendors/typed/typed.min.js"></script>
 		<!-- App-->
-		<script type="text/javascript" src="<?php echo base_url().'assets/js/main.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url().'assets/js/upload.js'; ?>"></script>
+		<script type="text/javascript" src="assets/js/main.js"></script>
 	</body>
 </html>
