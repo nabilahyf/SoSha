@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sosha - Social Sharing and Caring</title>
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.jpeg" />
+		<link rel="shortcut icon" type="image/x-icon" href="/SoSha/assets/img/logo.jpeg" />
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
@@ -105,7 +105,7 @@
 							<div class="modal-body">
 							<?php echo form_open_multipart('Welcome/login');?>
 								<div class="imgcontainer">
-									<img src="assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
+									<img src="/SoSha/assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
 								</div>
 
 									<label for="email"><b>Email</b></label>
@@ -198,32 +198,13 @@
 									<!-- swiper__module swiper-container -->
 									<div class="swiper__module swiper-container slide-image__front" data-options='{"slidesPerView":1,"spaceBetween":0}'>
 										<div class="swiper-wrapper">
-<<<<<<< HEAD
-											<div class="slide-item" style="background-image: url('assets/img/about/SoSha3.jpg');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/SoSha2.png');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/SoSha1.jpg');"></div>
+											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/SoSha3.jpg');"></div>
+											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/SoSha2.png');"></div>
+											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/SoSha1.jpg');"></div>
 										</div>
 										<div class="swiper-pagination-custom"></div>
 									</div><!-- End / swiper__module swiper-container -->							
-=======
-											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/1.jpg');"></div>
-											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/2.jpg');"></div>
-											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/3.jpg');"></div>
-										</div>
-										<div class="swiper-pagination-custom"></div>
-									</div><!-- End / swiper__module swiper-container -->
-									
-									
-									<!-- swiper-thumbnails__module swiper-container -->
-									<div class="swiper-thumbnails__module swiper-container slide-image__black" data-options='{"slidesPerView":1,"spaceBetween":0,"delay":10000}'>
-										<div class="swiper-wrapper">
-											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/1b.jpg');"></div>
-											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/2b.jpg');"></div>
-											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/3b.jpg');"></div>
-										</div>
-									</div><!-- End / swiper-thumbnails__module swiper-container -->
->>>>>>> origin/gugum
-									
+
 								</div><!-- End / slide-image -->
 								
 							</div>
