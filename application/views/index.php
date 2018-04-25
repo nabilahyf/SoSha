@@ -228,7 +228,7 @@
 				<section class="md-section bg-gray" id="id-2">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-5 ">
+							<div class="col-lg-6 ">
 								
 								<!-- slide-image -->
 								<div class="slide-image">
@@ -246,7 +246,7 @@
 								</div><!-- End / slide-image -->
 								
 							</div>
-							<div class="col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1 ">
+							<div class="col-lg-5 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1 ">
 								
 								<!-- title -->
 								<div class="title">

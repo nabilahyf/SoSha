@@ -13,6 +13,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('index');
 	}
 	
+	public function myprof()
+	{
+		$this->load->view('myprofil');
+	}
 
 	function regist_volunteer(){	
 		$length 						= strlen($_FILES['gambar']['name']);
