@@ -486,7 +486,7 @@
 										</a><!-- End / social-icon -->
 										
 						</div>
-						<p class="footer__copy">2018 &copy; Copyright Awe7. All rights Reserved.</p>
+						<p class="footer__copy">2018 &copy; Copyright SoSha Team. All rights Reserved.</p>
 					</div>
 				</div>
 			</div><!-- End / footer -->
