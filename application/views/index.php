@@ -42,13 +42,11 @@
 									</li>
 									<li><a href="#id-2" style="color: #333;">About</a>
 									</li>
-									<li><a href="#id-3" style="color: #333;">Portfolio</a>
+									<li><a href="#id-3" style="color: #333;">Article</a>
 									</li>
-									<li><a href="#id-4" style="color: #333;">Blog</a>
+									<li><a href="#id-4" style="color: #333;">Contact</a>
 									</li>
-									<li><a href="#id-5" style="color: #333;">Contact</a>
-									</li>
-									<li><a href="#id-6" style="color: #333;" data-toggle="modal" data-target="#myLogin">Join Us</a>
+									<li><a href="#id-5" style="color: #333;" data-toggle="modal" data-target="#myLogin">Join Us</a>
 									</li>
 								</ul><!-- onepage-menu -->
 								
