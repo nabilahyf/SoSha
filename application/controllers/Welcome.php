@@ -11,10 +11,6 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
-	public function buatkegiatan()
-	{
-		$this->load->view('buatkegiatan');
-	}
 	
 
 	function regist_volunteer(){	
