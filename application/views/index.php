@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sosha - Social Sharing and Caring</title>
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.jpeg" />
+		<link rel="shortcut icon" type="image/x-icon" href="/SoSha/assets/img/logo.jpeg" />
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
@@ -43,13 +43,11 @@
 									</li>
 									<li><a href="#id-2" style="color: #333;">About</a>
 									</li>
-									<li><a href="#id-3" style="color: #333;">Portfolio</a>
+									<li><a href="#id-3" style="color: #333;">Article</a>
 									</li>
-									<li><a href="#id-4" style="color: #333;">Blog</a>
+									<li><a href="#id-4" style="color: #333;">Contact</a>
 									</li>
-									<li><a href="#id-5" style="color: #333;">Contact</a>
-									</li>
-									<li><a href="#id-6" style="color: #333;" data-toggle="modal" data-target="#myLogin">Join Us</a>
+									<li><a href="#id-5" style="color: #333;" data-toggle="modal" data-target="#myLogin">Join Us</a>
 									</li>
 								</ul><!-- onepage-menu -->
 								
@@ -83,7 +81,8 @@
 										
 									</h4>
 									<p class="hero__text" style="margin-top: 35px;">
-										Bagikan kebahagiaan untuk sesama.
+										Ayo berbagi kebahagiaan kepada sesama.  
+										
 									</p>
 								</div>
 							</div><span id="back-to-down"><i class="pe-7s-angle-down"></i></span>
@@ -105,7 +104,7 @@
 							<div class="modal-body">
 							<?php echo form_open_multipart('Welcome/login');?>
 								<div class="imgcontainer">
-									<img src="assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
+									<img src="/SoSha/assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
 								</div>
 
 									<label for="email"><b>Email</b></label>
@@ -190,7 +189,7 @@
 				<section class="md-section bg-gray" id="id-2">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-5 ">
+							<div class="col-lg-6 ">
 								
 								<!-- slide-image -->
 								<div class="slide-image">
@@ -198,17 +197,17 @@
 									<!-- swiper__module swiper-container -->
 									<div class="swiper__module swiper-container slide-image__front" data-options='{"slidesPerView":1,"spaceBetween":0}'>
 										<div class="swiper-wrapper">
-											<div class="slide-item" style="background-image: url('assets/img/about/SoSha3.jpg');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/SoSha2.png');"></div>
-											<div class="slide-item" style="background-image: url('assets/img/about/SoSha1.jpg');"></div>
+											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/SoSha3.jpg');"></div>
+											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/SoSha2.png');"></div>
+											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/SoSha1.jpg');"></div>
 										</div>
 										<div class="swiper-pagination-custom"></div>
 									</div><!-- End / swiper__module swiper-container -->							
-									
+
 								</div><!-- End / slide-image -->
 								
 							</div>
-							<div class="col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1 ">
+							<div class="col-lg-5 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1 ">
 								
 								<!-- title -->
 								<div class="title">
@@ -230,138 +229,7 @@
 								
 								<!-- title -->
 								<div class="title">
-									<h2 class="title__title">portfolio</h2>
-								</div><!-- End / title -->
-								
-							</div>
-						</div>
-						<div class="grid-css grid-css--grid" data-col-lg="3" data-col-md="2" data-col-sm="2" data-col-xs="1" data-gap="30">
-							<div class="filter">
-								<ul class="filter__list">
-									<li><a href="#" data-filter="*">All</a></li>
-									<li><a href="#" data-filter=".cat1">Web design</a></li>
-									<li><a href="#" data-filter=".cat2">Applications</a></li>
-									<li><a href="#" data-filter=".cat3">Development</a></li>
-								</ul>
-							</div>
-							<div class="grid__inner">
-								<div class="grid-sizer"></div>
-								<div class="grid-item normal cat1 cat4">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- portfolio -->
-											<div class="portfolio" href="https://www.youtube.com/watch?v=XNqn4gEakQA"><a class="portfolio__bg popup-video" href="https://www.youtube.com/watch?v=XNqn4gEakQA" style="background-image: url('/SoSha/assets/img/portfolio/1.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/1.jpg"/>
-													<div class="portfolio__icon"><i class="fa fa-play"></i></div></a>
-											</div><!-- End / portfolio -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item normal cat4 cat2">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/2.jpg"><a class="portfolio__bg" href="assets/img/portfolio/2.jpg" style="background-image: url('/SoSha/assets/img/portfolio/2.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/2.jpg"/></a>
-											</div><!-- End / portfolio -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item normal cat2 cat1">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/3.jpg"><a class="portfolio__bg" href="assets/img/portfolio/3.jpg" style="background-image: url('/SoSha/assets/img/portfolio/3.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/3.jpg"/></a>
-											</div><!-- End / portfolio -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item normal cat3 cat4 cat2">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/4.jpg"><a class="portfolio__bg" href="assets/img/portfolio/4.jpg" style="background-image: url('/SoSha/assets/img/portfolio/4.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/4.jpg"/></a>
-											</div><!-- End / portfolio -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item normal cat4 cat3">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/5.jpg"><a class="portfolio__bg" href="assets/img/portfolio/5.jpg" style="background-image: url('/SoSha/assets/img/portfolio/5.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/5.jpg"/></a>
-											</div><!-- End / portfolio -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item normal cat1 cat4 cat3">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/6.jpg"><a class="portfolio__bg" href="assets/img/portfolio/6.jpg" style="background-image: url('/SoSha/assets/img/portfolio/6.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/6.jpg"/></a>
-											</div><!-- End / portfolio -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item normal cat2 cat3">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/7.jpg"><a class="portfolio__bg" href="assets/img/portfolio/7.jpg" style="background-image: url('/SoSha/assets/img/portfolio/7.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/7.jpg"/></a>
-											</div><!-- End / portfolio -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item normal cat3 cat1">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/8.jpg"><a class="portfolio__bg" href="assets/img/portfolio/8.jpg" style="background-image: url('/SoSha/assets/img/portfolio/8.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/8.jpg"/></a>
-											</div><!-- End / portfolio -->
-											
-										</div>
-									</div>
-								</div>
-								<div class="grid-item cat3 cat1">
-									<div class="grid-item__inner">
-										<div class="grid-item__content-wrapper">
-											
-											<!-- portfolio -->
-											<div class="portfolio" href="assets/img/portfolio/9.jpg"><a class="portfolio__bg" href="assets/img/portfolio/9.jpg" style="background-image: url('/SoSha/assets/img/portfolio/9.jpg');" data-effect="mfp-zoom-in"><img src="assets/img/portfolio/9.jpg"/></a>
-											</div><!-- End / portfolio -->
-											
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End / Section -->
-				
-				
-				<!-- Section -->
-				<section class="md-section bg-gray" id="id-4">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12">
-								
-								<!-- title -->
-								<div class="title">
-									<h2 class="title__title">Our blog</h2>
+									<h2 class="title__title">Article</h2>
 								</div><!-- End / title -->
 								
 							</div>
@@ -371,11 +239,11 @@
 								
 								<!--  -->
 								<div>
-									<div class="post__media"><a href="#"><img src="assets/img/blog/1.jpg" alt=""/></a></div>
+									<div class="post__media"><img src="/SoSha/assets/img/blog/1.jpg" alt=""/></a></div>
 									<div class="post__body">
-										<h2 class="post__title"><a href="#">Getting Started with Vue.Js</a></h2>
-										<div class="post__meta"><span class="author"><a href="#">Ashley Mills</a></span><span class="date">Jan 3, 2018</span></div>
-										<p class="post__text">Suspendisse ac elit vitae est lacinia interdum eu sit amet mauris. Phasellus aliquam nisi sit amet libero mattis ornare. In varius</p>
+										<h2 class="post__title"><a href="https://medium.com/@TERRAITB/pengabdian-masyarakat-dan-mahasiswa-5b230763ad6">Kegiatan Pengabdian Masyarakat oleh Mahasiswa ITB</a></h2>
+										<div class="post__meta"><span class="author">Sisca A.R</span><span class="date">Jan 3, 2018</span></div>
+										<p class="post__text">Pengabdian masyarakat adalah bentuk aktualisasi dan eskalasi potensi dalam diri mahasiswa dengan ilmu yang sudah diterima, alangkah baiknya pengabdian masyarakat dikemas dengan bentuk yang sangat simpel dan sederhana tetapi menjawab permasalahan yang berada di masyarakat danmemiliki efek yang berkelanjutan. Mengingat bahwa kondisi kesibukan mahasiswa dan adanya tanggung jawab sosial, moral dan intelektual dalam melaksanakan pengabdian masyarakat, maka terdapat beberapa bentuk pengabdian masyarakat</p>
 									</div>
 								</div><!-- End /  -->
 								
@@ -384,11 +252,11 @@
 								
 								<!--  -->
 								<div>
-									<div class="post__media"><a href="#"><img src="assets/img/blog/2.jpg" alt=""/></a></div>
+									<div class="post__media"><a href="#"><img src="/SoSha/assets/img/blog/2.jpg" alt=""/></a></div>
 									<div class="post__body">
-										<h2 class="post__title"><a href="#">The Essential Guide to UX for AR</a></h2>
-										<div class="post__meta"><span class="author"><a href="#">Bryan Ryan</a></span><span class="date">Jan 21, 2018</span></div>
-										<p class="post__text">Mauris lacinia venenatis dolor sit amet viverra. Integer malesuada nulla neque. Sed rutrum ligula eu sagittis volutpat. Aliquam</p>
+										<h2 class="post__title"><a href="https://moestopo.ac.id/2016/12/pengabdian-kepada-masyarakat-dan-bakti-sosial-mahasiswa-baru-angkatan-2016-fikom-updmb/">Penyuluhan Kesehatan di SDN Tegal Jaya 2 oleh para Tim Medis</a></h2>
+										<div class="post__meta"><span class="author">Sisca A.R</span><span class="date">Jan 21, 2018</span></div>
+										<p class="post__text">Acara penyuluhan “Kesehatan dan Gigi” dilakukan di SDN Tegal Jaya 2 Kampung Nagrog Desa Tegal dengan Tim Medis dari FKG dan RSGM UPDM(B) dengan peserta siswa siswa SDN Tegal Jaya 2 yang antusias dengan kegiatan ini. Dilantai 2 SDN yang sama dilakukan Pelatihan Pembuatan Data Base Administrasi Kependudukan oleh Dosen Universitas Terbuka yaitu Drs. Warsito, M.Pd (Instruktur Pelatihan Pengembangan Data Base Kependudukan UT) dan Drs. Sumartono, M.Si yang didampingi oleh tim penyuluh Drs. Bambang Sudiono, Juni Muryadi, S.Sos dan Drs. Sulfahlevi, MM. </p>
 									</div>
 								</div><!-- End /  -->
 								
@@ -397,11 +265,11 @@
 								
 								<!--  -->
 								<div>
-									<div class="post__media"><a href="#"><img src="assets/img/blog/3.jpg" alt=""/></a></div>
+									<div class="post__media"><a href="#"><img src="/SoSha/assets/img/blog/3.jpg" alt=""/></a></div>
 									<div class="post__body">
-										<h2 class="post__title"><a href="#">Design a Perfect Homepage</a></h2>
-										<div class="post__meta"><span class="author"><a href="#">Alice Brooks</a></span><span class="date">Jan 23, 2018</span></div>
-										<p class="post__text">Sed ante nisl, fermentum et facilisis in, maximus sed ipsum. Cras hendrerit feugiat eros, ut fringilla nunc finibus sed. Quisque</p>
+										<h2 class="post__title"><a href="https://rsazra.co.id/rsazra/index.php/30/jumatberkah-acara-santunan-anak-yatim-dan-dhuafa-oleh-rumah-sakit-azra-bogor/">Lebih dekat dengan sesama dalam acara santunan bersama anak yatim piatu</a></h2>
+										<div class="post__meta"><span class="author">Sisca A.R</span><span class="date">Jan 23, 2018</span></div>
+										<p class="post__text">Rumah Sakit Azra Bogor menggelar acara rutin setiap bulan yaitu melakukan acara santunan kepada anak yatim dan dhuafa disekitar Rumah Sakit Azra. Acara tersebut digelar dalam rangka bentuk kepedulian Rumah Sakit Azra terhadap warga sekitar</p>
 									</div>
 								</div><!-- End /  -->
 								
@@ -413,14 +281,14 @@
 				
 				
 				<!-- Section -->
-				<section class="md-section" id="id-5">
+				<section class="md-section" id="id-4">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4 ">
 								
 								<!-- title -->
 								<div class="title">
-									<h2 class="title__title">Get in touch</h2>
+									<h2 class="title__title">Contact Us</h2>
 								</div><!-- End / title -->
 								
 								<div class="mb-40">
@@ -428,21 +296,21 @@
 									<!-- contact -->
 									<div class="contact">
 										<h3 class="contact__title">address</h3>
-										<div>Division No. 10, Subd. D, Newfoundland and Labrador, Canada</div>
+										<div>Jalan Ciledug Raya Blok Haji Haisin No.22, Petukangan Utara, Pesanggrahan, Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12260</div>
 									</div><!-- End / contact -->
 									
 									
 									<!-- contact -->
 									<div class="contact">
 										<h3 class="contact__title">email</h3>
-										<div><a href="">info@awe7.com</a></div>
+										<div><a href="">cs@sosha.com</a></div>
 									</div><!-- End / contact -->
 									
 									
 									<!-- contact -->
 									<div class="contact">
 										<h3 class="contact__title">phone</h3>
-										<div>+61 1900 654 321</div>
+										<div>0812 000 123 900 </div>
 									</div><!-- End / contact -->
 									
 								</div>

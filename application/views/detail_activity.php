@@ -41,15 +41,13 @@
 								
 								<!-- onepage-menu -->
 								<ul class="onepage-menu">
-									<li><a href="<?php echo base_url('Activity');?>" style="color: #333;">All Activity</a>
-									</li>
-									<li><a href="<?php echo base_url('Activity/mine');?>" style="color: #333;">Mine</a>
+									<li class="current-menu-item"><a href="<?php echo base_url('Activity');?>" style="color: #333;">List Activity</a>
 									</li>
 									<li><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>
-									<li><a href="#id-3" style="color: #333;">Joined <sup style="font-size: 8pt; color: red;"> NEW</sup></a>
+									<li><a href="#id-3" style="color: #333;">Joined</a>
 									</li>
-									<li><a href="<?php echo base_url('Welcome/logout');?>" style="color: orange;">Logout</a>
+									<li><a href="<?php echo base_url('Welcome/logout');?>" style="color: red;">Logout</a>
 									</li>
 								</ul><!-- onepage-menu -->
 								
@@ -61,45 +59,72 @@
 				</div>
 			</header><!-- End / header -->
 
-			<div class="container" style="padding-bottom: 50px;"> 
-					<h4>My Profile</h4>
-					<div class="row">
-						<div class="span2" style="padding-top: 5%;" "padding-left: 5%;">
-						<img src="<?php echo base_url().'profile/'.$foto; ?>"  alt="" class="col-md-3">
-						</div>
-					<div class="col-md-3">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>Name</td>
-                        <td><?php echo $full_name; ?></td>
-                      </tr>
-                      <tr>
-                        <td>Email</td>
-                        <td><?php echo $email; ?></td>
-                      </tr>
-                      <tr>
-                        <td>Alamat</td>
-                        <td><?php echo $alamat; ?></td>
-                      </tr>
-                      <tr>
-                        <td>No Telp</td>
-                        <td><?php echo $no_tlp; ?></td>
-                      </tr>
-                      <tr>
-                        <td>Jenis Kelamin</td>
-                        <td><?php echo $jenkel; ?></td>
-                      </tr>
-                      <tr>
-                        <td>TTL</td>
-                        <td><?php echo $birthday; ?></td>
-                      </tr>
-                    </tbody>
-                  </table>
-				  </div>
-				  </div>
-			</div>
-          
+
+            <div class="container" style="padding-bottom: 50px;">   
+			<div class="row">
+				<div class="col-sm-1">
+				<div class="thumbnail">
+				<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+				</div><!-- /thumbnail -->
+				</div><!-- /col-sm-1 -->
+
+				<div class="col-sm-5">
+				<div class="panel panel-default">
+				<div class="panel-heading">
+				<strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+				</div>
+				<div class="panel-body">
+				Panel content
+			</div><!-- /panel-body -->
+			</div><!-- /panel panel-default -->
+			</div><!-- /col-sm-5 -->
+
+        <div class="card">
+	    <div class="card-body">
+	        <div class="row">
+        	    <div class="col-md-2">
+        	        <img <?php echo base_url ('/SoSha/assets/img/portfolio/def_face.jpg') ?> class="img img-rounded img-fluid"/>
+        	        <p class="text-secondary text-center">15 Minutes Ago</p>
+        	    </div>
+        	    <div class="col-md-10">
+        	        <p>
+        	            <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman Akash</strong></a>
+        	            <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                        <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+        	            <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+        	            <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+
+        	       </p>
+        	       <div class="clearfix"></div>
+        	        <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        	        <p>
+        	            <a class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Reply</a>
+        	            <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+        	       </p>
+        	    </div>
+	        </div>
+	        	<div class="card card-inner">
+            	    <div class="card-body">
+            	        <div class="row">
+                    	    <div class="col-md-2">
+                    	        <img <?php echo base_url ('/SoSha/assets/img/portfolio/def_face.jpg') ?> class="img img-rounded img-fluid"/>
+                    	        <p class="text-secondary text-center">15 Minutes Ago</p>
+                    	    </div>
+                    	    <div class="col-md-10">
+                    	        <p><a href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman Akash</strong></a></p>
+                    	        <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    	        <p>
+                    	            <a class="float-right btn btn-outline-primary ml-2">  <i class="fa fa-reply"></i> Reply</a>
+                    	            <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+                    	       </p>
+                    	    </div>
+            	        </div>
+            	    </div>
+	            </div>
+	    </div>
+	</div>
+            </div>
+    
 			
 			<!-- footer -->
 			<div class="footer">

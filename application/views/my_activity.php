@@ -31,9 +31,9 @@
 			<header class="header " style="box-shadow: 0 4px 2px -2px #ccc;">
 				<div class="container">
 					<div class="header__inner">
-						<div class="header__logo"><a href="" style="font-size: 11.5pt;">
-                            <img src="<?php echo base_url().'profile/'.$foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
-                            &emsp; <?php echo "Welcome <i style='color: #999;'>".$full_name."</i>"; ?></a></div>
+						<div class="header__logo"><a href="<?php echo base_url('Activity/profile');?>" style="font-size: 11.5pt;">
+                            <img src="<?php echo base_url().'profile/'.$this->session->foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
+                            &emsp; <?php echo "Welcome <i style='color: #999;'>".$this->session->full_name."</i>"; ?></a></div>
 						<div class="header__menu">
 							
 							<!-- onepage-nav -->
@@ -43,7 +43,7 @@
 								<ul class="onepage-menu">
 									<li><a href="<?php echo base_url('Activity');?>" style="color: #333;">All Activity</a>
 									</li>
-									<li><a href="<?php echo base_url('Activity/mine');?>" style="color: #333;">Mine</a>
+									<li class="current-menu-item"><a href="<?php echo base_url('Activity/mine');?>" style="color: #333;">Mine</a>
 									</li>
 									<li><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>
@@ -61,48 +61,52 @@
 				</div>
 			</header><!-- End / header -->
 
-			<div class="container" style="padding-bottom: 50px;"> 
-					<h4>My Profile</h4>
-					<div class="row">
-						<div class="span2" style="padding-top: 5%;" "padding-left: 5%;">
-						<img src="<?php echo base_url().'profile/'.$foto; ?>"  alt="" class="col-md-3">
-						</div>
-					<div class="col-md-3">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>Name</td>
-                        <td><?php echo $full_name; ?></td>
-                      </tr>
-                      <tr>
-                        <td>Email</td>
-                        <td><?php echo $email; ?></td>
-                      </tr>
-                      <tr>
-                        <td>Alamat</td>
-                        <td><?php echo $alamat; ?></td>
-                      </tr>
-                      <tr>
-                        <td>No Telp</td>
-                        <td><?php echo $no_tlp; ?></td>
-                      </tr>
-                      <tr>
-                        <td>Jenis Kelamin</td>
-                        <td><?php echo $jenkel; ?></td>
-                      </tr>
-                      <tr>
-                        <td>TTL</td>
-                        <td><?php echo $birthday; ?></td>
-                      </tr>
-                    </tbody>
-                  </table>
-				  </div>
-				  </div>
-			</div>
-          
+
+            <div class="container" style="padding-bottom: 20px; padding-top: 50px;"> 
+
+                
+				<?php 
+					foreach($kegiatan as $u){ 
+				?>
+
+				<div class="col-lg-12" style="border-bottom: 1px solid #ccc; padding-bottom: 20px;">
+					<div class="col-lg-2" style="margin-left: -28px;">
+						<img src="<?php echo base_url().'acara/'.$u->gambar ?>">
+					</div>
+					<div class="col-lg-5" style="margin-top: -5px; font-size: 9.5pt;">
+						Judul &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; : <?php echo $u->title; ?><br/>
+						Penyelenggara &emsp; : <?php echo $u->full_name; ?> <br/>
+						Lokasi&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: <?php echo $u->tempat; ?> <br/>
+						Tanggal &emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;:  <?php echo $u->tanggal; ?><br/>
+						Sisa Kuota &emsp;&emsp;&emsp;&ensp;&nbsp;:  <?php echo $u->slot; ?>
+					</div>
+					<div class="col-lg-5" style="margin-top: -5px; right: -50px; font-size: 9.5pt; max-height: 100px; overflow-y: auto;">
+						<?php echo $u->description; ?>
+					</div>
+				</div>         
+				<div class="col-lg-12" style="margin-bottom: 50px;">
+					<div class="col-lg-6" style="margin-left: -30px;">
+						Created at :  <?php echo $u->created_at; ?>
+					</div>
+					<div class="col-lg-6" style="text-align: right; right: -60px;">
+					<a href="<?php echo base_url().'Activity/page_update/'.$u->kegiatan_id; ?>">Update</a> | <a href="<?php echo base_url().'Activity/delete/'.$u->kegiatan_id; ?>">Delete</a>
+					</div>
+				</div>
+
+
+				<?php
+					}
+				?>
+            </div>
+
+
+                <?php 
+                  echo $this->pagination->create_links();
+                ?>
+    
 			
 			<!-- footer -->
-			<div class="footer">
+			<div class="footer" style="margin-top: 50px;">
 				<div id="back-to-top"><i class="pe-7s-angle-up"></i></div>
 				<div class="container">
 					<div class="footer__wrapper">
