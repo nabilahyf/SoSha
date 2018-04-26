@@ -96,17 +96,10 @@ class Activity extends CI_Controller {
 	{
 		if($this->session->user_id==NULL){
 			redirect('Welcome');	
-		}else{						
-			$data = array(
-				'user_id' 		=> $this->session->user_id,
-				'foto'			=> $this->session->foto,	
-				'email' 		=> $this->session->email,
-				'full_name'		=> $this->session->full_name,
-				'alamat'		=> $this->session->alamat,
-				'no_tlp'		=> $this->session->no_tlp,
-				'jenkel'		=> $this->session->jenkel,
-				'birthday'		=> $this->session->birthday
-			);
+		}else{		
+
+			$result = $this->M_activity->all_kegiatan();
+			$data['lokasi'] = $result;
 			$this->load->view('create_activity', $data);
 		}
 	}

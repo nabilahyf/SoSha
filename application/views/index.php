@@ -239,7 +239,7 @@
 								
 								<!--  -->
 								<div>
-									<div class="post__media"><img src="SoSha/assets/img/blog/1a.jpg" alt=""/></a></div>
+									<div class="post__media"><img src="/SoSha/assets/img/blog/1.jpg" alt=""/></a></div>
 									<div class="post__body">
 										<h2 class="post__title"><a href="https://medium.com/@TERRAITB/pengabdian-masyarakat-dan-mahasiswa-5b230763ad6">Kegiatan Pengabdian Masyarakat oleh Mahasiswa ITB</a></h2>
 										<div class="post__meta"><span class="author">Sisca A.R</span><span class="date">Jan 3, 2018</span></div>
@@ -252,7 +252,7 @@
 								
 								<!--  -->
 								<div>
-									<div class="post__media"><a href="#"><img src="SoSha/assets/img/blog/2a.jpg" alt=""/></a></div>
+									<div class="post__media"><a href="#"><img src="/SoSha/assets/img/blog/2.jpg" alt=""/></a></div>
 									<div class="post__body">
 										<h2 class="post__title"><a href="https://moestopo.ac.id/2016/12/pengabdian-kepada-masyarakat-dan-bakti-sosial-mahasiswa-baru-angkatan-2016-fikom-updmb/">Penyuluhan Kesehatan di SDN Tegal Jaya 2 oleh para Tim Medis</a></h2>
 										<div class="post__meta"><span class="author">Sisca A.R</span><span class="date">Jan 21, 2018</span></div>
@@ -265,7 +265,7 @@
 								
 								<!--  -->
 								<div>
-									<div class="post__media"><a href="#"><img src="SoSha/assets/img/blog/3a.jpg" alt=""/></a></div>
+									<div class="post__media"><a href="#"><img src="/SoSha/assets/img/blog/3.jpg" alt=""/></a></div>
 									<div class="post__body">
 										<h2 class="post__title"><a href="https://rsazra.co.id/rsazra/index.php/30/jumatberkah-acara-santunan-anak-yatim-dan-dhuafa-oleh-rumah-sakit-azra-bogor/">Lebih dekat dengan sesama dalam acara santunan bersama anak yatim piatu</a></h2>
 										<div class="post__meta"><span class="author">Sisca A.R</span><span class="date">Jan 23, 2018</span></div>
@@ -303,14 +303,14 @@
 									<!-- contact -->
 									<div class="contact">
 										<h3 class="contact__title">email</h3>
-										<div><a href="">www.x.com</a></div>
+										<div><a href="">cs@sosha.com</a></div>
 									</div><!-- End / contact -->
 									
 									
 									<!-- contact -->
 									<div class="contact">
 										<h3 class="contact__title">phone</h3>
-										<div>0812 xxx xxx </div>
+										<div>0812 000 123 900 </div>
 									</div><!-- End / contact -->
 									
 								</div>
@@ -396,11 +396,7 @@
 										</a><!-- End / social-icon -->
 										
 						</div>
-<<<<<<< HEAD
 						<p class="footer__copy">2018 &copy; Copyright SoSha. All rights Reserved.</p>
-=======
-						<p class="footer__copy">2018 &copy; Copyright SoSha Team. All rights Reserved.</p>
->>>>>>> 1647873e0f69d4b52742751ed10ece245f1fd2d6
 					</div>
 				</div>
 			</div><!-- End / footer -->

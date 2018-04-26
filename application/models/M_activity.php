@@ -74,4 +74,9 @@ class M_activity extends CI_Model{
 		
 		return $checkupdate; 
 	}
+
+	function all_kegiatan(){
+		$result = $this->db->get('kegiatan')->result();
+		return $result;
+	}
 }

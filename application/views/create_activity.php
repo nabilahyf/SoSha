@@ -32,8 +32,8 @@
 				<div class="container">
 					<div class="header__inner">
 						<div class="header__logo"><a href="<?php echo base_url('Activity/profile');?>" style="font-size: 11.5pt;">
-                            <img src="<?php echo base_url().'profile/'.$foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
-                            &emsp; <?php echo "Welcome <i style='color: #999;'>".$full_name."</i>"; ?></a></div>
+                            <img src="<?php echo base_url().'profile/'.$this->session->foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
+                            &emsp; <?php echo "Welcome <i style='color: #999;'>".$this->session->full_name."</i>"; ?></a></div>
 						<div class="header__menu">
 							
 							<!-- onepage-nav -->
@@ -109,7 +109,10 @@
                                 <div class="form-group">
                                     <label for="location" class="col-md-3 control-label">Location</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" style="font-size: 9pt; color: #666;" name="location">
+                                        <input id="myLocation" type="text" class="form-control" style="font-size: 9pt; color: #666;" name="location">
+										<div class="checkbox">
+											<label><input type="checkbox" id="recommended" data-toggle="modal" data-target="#myModal" onclick="$('#recommended').prop('checked', false);">View recommendation</label>
+										</div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -137,6 +140,45 @@
                     </div>
                 </div> 
             </div>
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+				
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h5 class="modal-title">Disarankan</h5>
+					</div>
+					<div class="modal-body" style="max-height: 400px; overflow-y: auto;">
+						<h6>Pilih Lokasi</h6>
+						<span style='font-family: Georgia;'>Lokasi berikut direkomendasikan karena sudah pernah digunakan untuk menyelenggarakan acara sebelumnya</span>            
+						<table class="table table-striped" style="margin-top: 20px;">
+							<tbody>
+								<?php 
+									$counter = 0;
+									foreach($lokasi as $l){
+										$counter+=1;
+								?>
+								<tr>
+									<td><?php echo $counter; ?></td>
+									<td class="btn" onclick="document.getElementById('myLocation').value = '<?php echo $l->tempat; ?>';" data-dismiss="modal"><?php echo $l->tempat ?></td>
+								</tr>
+								<?php
+									}
+								?>							
+							</tbody>
+						</table>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+				
+				</div>
+			</div>
     
 			
 			<!-- footer -->
