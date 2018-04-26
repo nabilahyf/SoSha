@@ -59,4 +59,19 @@ class M_activity extends CI_Model{
 		return $checkupdate; 
 		
 	}
+
+	function delete_data($id){
+		$checkupdate = false;
+		
+		try{
+			$this->db->where('kegiatan_id',$id);
+			$this->db->delete('kegiatan');
+			$checkupdate = true;
+		}catch (Exception $ex) {
+			
+			$checkupdate = false;
+		}
+		
+		return $checkupdate; 
+	}
 }

@@ -77,7 +77,8 @@
 						Judul &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; : <?php echo $u->title; ?><br/>
 						Penyelenggara &emsp; : <?php echo $u->full_name; ?> <br/>
 						Lokasi&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: <?php echo $u->tempat; ?> <br/>
-						Tanggal &emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;:  <?php echo $u->tanggal; ?>
+						Tanggal &emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;:  <?php echo $u->tanggal; ?><br/>
+						Sisa Kuota &emsp;&emsp;&emsp;&ensp;&nbsp;:  <?php echo $u->slot; ?>
 					</div>
 					<div class="col-lg-5" style="margin-top: -5px; right: -50px; font-size: 9.5pt; max-height: 100px; overflow-y: auto;">
 						<?php echo $u->description; ?>
@@ -92,7 +93,7 @@
 							if($u->user_id != $this->session->user_id){
 								echo "<a href='#' style='color: orange;'>Join</a>";
 							}else{
-								echo "<a href='".base_url()."Activity/page_update/".$u->kegiatan_id."' >Update</a> | <a href='#'>Delete</a>";
+								echo "<a href='".base_url()."Activity/page_update/".$u->kegiatan_id."' >Update</a> | <a href='".base_url()."Activity/delete/".$u->kegiatan_id."'>Delete</a>";
 							}
 						?>
 					</div>

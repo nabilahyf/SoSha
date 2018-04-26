@@ -116,6 +116,7 @@ class Activity extends CI_Controller {
 				'description'	=> $this->input->post('description'),
 				'tanggal'		=> $this->input->post('date'),
 				'tempat'		=> $this->input->post('location'),
+				'slot'			=>$this->input->post('slot'),
 				'created_at'	=> date('Y-m-d H:i:s')
 			);    
 
@@ -191,6 +192,7 @@ class Activity extends CI_Controller {
 				'description'	=> $checkKegiatan->description,
 				'tanggal'		=> $checkKegiatan->tanggal,
 				'tempat'		=> $checkKegiatan->tempat,
+				'slot'			=> $checkKegiatan->slot,
 				'created_at'	=> $checkKegiatan->created_at,
 				'updated_at'	=> $checkKegiatan->updated_at
 			);
@@ -225,6 +227,7 @@ class Activity extends CI_Controller {
 				'description'=>$this->input->post('description'),
 				'tanggal'=>$this->input->post('date'),
 				'tempat'=>$this->input->post('location'),
+				'slot'=>$this->input->post('slot'),
 				'updated_at'=>date('Y-m-d H:i:s')
 			);
 
@@ -248,6 +251,7 @@ class Activity extends CI_Controller {
 				'description'=>$this->input->post('description'),
 				'tanggal'=>$this->input->post('date'),
 				'tempat'=>$this->input->post('location'),
+				'slot'=>$this->input->post('slot'),
 				'updated_at'=>date('Y-m-d H:i:s')
 			);
 			$result = $this->M_activity->update_data($id,$data);
@@ -260,6 +264,27 @@ class Activity extends CI_Controller {
 					<script>alert('proses bermasalah');</script>
 				<?php
 			}
+		}
+	}
+
+	function delete($id){
+		if($this->session->email==NULL){
+			redirect('Welcome');
+		}
+
+		$checkDetil = $this->M_activity->read_kegiatan($id);
+		$gambar = $checkDetil->gambar;
+
+		unlink('./acara/'.$gambar);
+
+		$result = $this->M_activity->delete_data($id);
+
+		if(!$result){
+			?>
+				<script>alert('proses bermasalah');</script>
+			<?php
+		}else{
+			redirect('Activity');
 		}
 	}
     

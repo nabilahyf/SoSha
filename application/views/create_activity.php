@@ -113,6 +113,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label for="slot" class="col-md-3 control-label">Kuota</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" style="font-size: 9pt; color: #666;" name="slot">
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="description" class="col-md-3 control-label">Description</label>
                                     <div class="col-md-9">
                                         <textarea name="description" style="font-size: 9pt; color: #666;" rows="50" cols="50"></textarea>
