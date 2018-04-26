@@ -59,39 +59,43 @@
 				</div>
 			</header><!-- End / header -->
 
-			
-            <div class="container" style="padding-bottom: 50px;">   
-				<div class="row">
+			<div class="container" style="padding-bottom: 50px;"> 
+					<h4>My Profile</h4>
+					<div class="row">
 						<div class="span2" style="padding-top: 5%;" "padding-left: 5%;">
 						<img src="<?php echo base_url().'profile/'.$foto; ?>"  alt="" class="col-md-3">
-					</div>
+						</div>
 					<div class="col-md-3">
-							<p>
-							<b>Nama</b>
-							<text src="<?php echo base_url().'profile/'.$full_name; ?>" >
-							</p>
-							<p>
-							<b>Email</b>
-							<text src="<?php echo base_url().'profile/'.$email; ?>" >
-							</p>
-							<p>
-							<b>Alamat</b>
-							<text src="<?php echo base_url().'profile/'.$alamat; ?>" >
-							</p>
-							<p>
-							<b>No Telepon</b>
-							<text src="<?php echo base_url().'profile/'.$no_tlp; ?>" >
-							</p>
-							<p>
-							<b>Jenis Kelamin</b>
-							<text src="<?php echo base_url().'profile/'.$jenkel; ?>" >
-							</p>
-							<p>
-							<b>Tempat & Tanggal Lahir</b>
-							<text src="<?php echo base_url().'profile/'.$birthday; ?>" >
-							</p>
-					</div>
-				</div>
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>Name</td>
+                        <td><?php echo $full_name; ?></td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><?php echo $email; ?></td>
+                      </tr>
+                      <tr>
+                        <td>Alamat</td>
+                        <td><?php echo $alamat; ?></td>
+                      </tr>
+                      <tr>
+                        <td>No Telp</td>
+                        <td><?php echo $no_tlp; ?></td>
+                      </tr>
+                      <tr>
+                        <td>Jenis Kelamin</td>
+                        <td><?php echo $jenkel; ?></td>
+                      </tr>
+                      <tr>
+                        <td>TTL</td>
+                        <td><?php echo $birthday; ?></td>
+                      </tr>
+                    </tbody>
+                  </table>
+				  </div>
+				  </div>
 			</div>
           
 			
