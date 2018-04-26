@@ -32,7 +32,7 @@
 				<div class="container">
 					<div class="header__inner">
 						<div class="header__logo"><a href="" style="font-size: 11.5pt;">
-                            <img src="<?php echo base_url().'profile/'.$foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
+                            <img src="<?php echo base_url().'profile/'.$this->session->foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
                             &emsp; <?php echo "Welcome <i style='color: #999;'>".$full_name."</i>"; ?></a></div>
 						<div class="header__menu">
 							
@@ -62,8 +62,29 @@
 			</header><!-- End / header -->
 
 
-            <div class="container" style="padding-bottom: 50px;">   
-                
+            <div class="container" style="padding-bottom: 20px; padding-top: 20px;"> 
+				<div class="col-lg-12" style="border-bottom: 1px solid #ccc; padding-bottom: 20px;">
+					<div class="col-lg-2" style="margin-left: -28px;">
+						<img src="/SoSha/acara/1524601140_contoh-seminar.jpg">
+					</div>
+					<div class="col-lg-5" style="margin-top: -5px; font-size: 9.5pt;">
+						Judul &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; : Kanker Otak, Bisa Saya, Kamu, Dia, dan Mereka<br/>
+						Penyelenggara &emsp; : Gugum <br/>
+						Lokasi&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: Budi Luhur <br/>
+						Tanggal &emsp;&emsp;&emsp;&emsp;&ensp;&nbsp; : 21 Oktober 2012
+					</div>
+					<div class="col-lg-5" style="margin-top: -5px; right: -50px; font-size: 9.5pt; max-height: 100px; overflow-y: auto;">
+					Seminar kanker berjudul: “Kanker Otak, Bisa Saya, Kamu, Dia, dan Mereka” ini merupakan bentuk kepedulian mahasiswa biokimia yang tergabung dalam Community of Research and Education in Biochemistry (CREB’s) tentang masalah kanker yang presentasenya meningkat dari tahun ke tahun. Sasaran peserta seminar ini adalah seluruh mahasiswa Institut Pertanian Bogor (IPB), mahasiswa non-IPB, dan masyarakat umum. Seminar ini melibatkan 50 orang panitia.
+					</div>
+				</div>         
+				<div class="col-lg-12">
+					<div class="col-lg-6" style="margin-left: -30px;">
+						Created at : 2018-04-26 11:08:12
+					</div>
+					<div class="col-lg-6" style="text-align: right; right: -60px;">
+						<a href="#">Join</a>
+					</div>
+				</div>
             </div>
     
 			
