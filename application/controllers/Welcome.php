@@ -12,7 +12,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('index');
 	}
 	
-
 	function regist_volunteer(){	
 		$length 						= strlen($_FILES['gambar']['name']);
 		$config['remove_space'] 		= TRUE;

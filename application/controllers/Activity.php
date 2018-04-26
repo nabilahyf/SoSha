@@ -72,6 +72,26 @@ class Activity extends CI_Controller {
 		}
 	}
 
+	function detail()
+	{
+		if($this->session->kegiatan_id==NULL){
+			redirect('Welcome');
+		}else{
+			$data = array(
+				'kegiatan_id'	=> $this->session->kegiatan_id,
+				'user_id'		=> $this->session->user_id,
+				'title'			=> $this->session->title,
+				'gambar'		=> $this->session->gambar,
+				'description'	=> $this->session->description,
+				'tanggal'		=> $this->session->tanggal,
+				'tempat'		=> $this->session->tempat,
+				'created_at'	=> $this->session->created_at,
+				'updated_at'	=> $this->session->updated_at
+			);
+			$this-load-view('detail_activity', $data);
+		}
+	}
+	
 	function page_create()
 	{
 		if($this->session->user_id==NULL){
