@@ -41,9 +41,9 @@
 								
 								<!-- onepage-menu -->
 								<ul class="onepage-menu">
-									<li class="current-menu-item"><a href="<?php echo base_url('Activity');?>" style="color: #333;">All Activity</a>
+									<li><a href="<?php echo base_url('Activity');?>" style="color: #333;">All Activity</a>
 									</li>
-									<li><a href="<?php echo base_url('Activity/mine');?>" style="color: #333;">Mine</a>
+									<li class="current-menu-item"><a href="<?php echo base_url('Activity/mine');?>" style="color: #333;">Mine</a>
 									</li>
 									<li><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>
@@ -88,13 +88,7 @@
 						Created at :  <?php echo $u->created_at; ?>
 					</div>
 					<div class="col-lg-6" style="text-align: right; right: -60px;">
-						<?php
-							if($u->user_id != $this->session->user_id){
-								echo "<a href='#'>Join</a>";
-							}else{
-								echo "<a href='#'>Update</a> | <a href='#'>Delete</a>";
-							}
-						?>
+						<!-- <a href="#">Join</a> -->
 					</div>
 				</div>
 				<?php

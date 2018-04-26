@@ -19,7 +19,7 @@ class Welcome extends CI_Controller {
 		$file_name						= time()."_".$_FILES['gambar']['name'];
 		$config['file_name']			= $file_name;
 		$config['upload_path']          = './profile/';
-		$config['allowed_types']        = 'gif|jpg|png'; 
+		$config['allowed_types']        = 'gif|jpg|png|jpeg'; 
 		$config['max_size']             = 2048;
 		// $config['max_width']            = 1024;
 		// $config['max_height']           = 1024;
@@ -29,10 +29,10 @@ class Welcome extends CI_Controller {
 		// Alternately you can set preferences by calling the ``initialize()`` method. Useful if you auto-load the class:
 		$this->upload->initialize($config);
  
-		if (!$this->upload->do_upload('gambar')){
-			$this->load->view('index', $this->upload->display_errors('<p>', '</p>'));
+		if (!$this->upload->do_upload('gambar')){	
+			redirect('');	
 		}else if(md5($this->input->post('password')) != md5($this->input->post('retype'))){
-			redirect('Y');	
+			redirect('');	
 		}else{
 			$data = array(            
 				'foto' 		=> $file_name,     
@@ -48,10 +48,32 @@ class Welcome extends CI_Controller {
 			$result = $this->M_user->registrasi_volunteer($data);
 		
 			$data = NULL;
-			if($result){			
-				redirect('Welcome');	
+			if($result){	
+				$email = $this->input->post('email');
+				$password = $this->input->post('password');
+				
+				$checkEmail = $this->M_user->read_data($email,$password);	
+			
+				if($checkEmail==NULL){			
+					redirect('');			
+				}else{
+					$newdata = array(
+						'user_id' 		=> $checkEmail->user_id,
+						'foto'			=> $checkEmail->foto,	
+						'email' 		=> $checkEmail->email,
+						'full_name'		=> $checkEmail->full_name,
+						'alamat'		=> $checkEmail->alamat,
+						'no_tlp'		=> $checkEmail->no_tlp,
+						'jenkel'		=> $checkEmail->jenkel,
+						'birthday'		=> $checkEmail->birthday
+		
+					  );
+					//set seassion
+					$this->session->set_userdata($newdata);
+					redirect('Activity');
+				}		
 			}else{			
-				redirect('Z');	
+				redirect('');	
 			}
 		}
 	}
@@ -63,7 +85,7 @@ class Welcome extends CI_Controller {
 		$checkEmail = $this->M_user->read_data($email,$password);	
 	
 		if($checkEmail==NULL){			
-			redirect('X');			
+			redirect('');			
 		}else{
 			$newdata = array(
 				'user_id' 		=> $checkEmail->user_id,
@@ -84,7 +106,7 @@ class Welcome extends CI_Controller {
 	
 		function logout(){
 			$this->session->sess_destroy();
-			redirect('Welcome');
+			redirect('');
 		}
 
 
