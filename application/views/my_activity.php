@@ -31,7 +31,7 @@
 			<header class="header " style="box-shadow: 0 4px 2px -2px #ccc;">
 				<div class="container">
 					<div class="header__inner">
-						<div class="header__logo"><a href="" style="font-size: 11.5pt;">
+						<div class="header__logo"><a href="<?php echo base_url('Activity/profile');?>" style="font-size: 11.5pt;">
                             <img src="<?php echo base_url().'profile/'.$this->session->foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
                             &emsp; <?php echo "Welcome <i style='color: #999;'>".$this->session->full_name."</i>"; ?></a></div>
 						<div class="header__menu">
@@ -88,89 +88,9 @@
 						Created at :  <?php echo $u->created_at; ?>
 					</div>
 					<div class="col-lg-6" style="text-align: right; right: -60px;">
-					<a href='#' data-toggle="modal" data-target="#myUpdate">Update</a> | <a href='#'>Delete</a>"
+					<a href="<?php echo base_url().'Activity/page_update/'.$u->kegiatan_id; ?>">Update</a> | <a href='#'>Delete</a>
 					</div>
 				</div>
-
-
-
-
-					<!-- Modal Update-->
-					<div class="modal fade" id="myUpdate" role="dialog">
-						<div class="modal-dialog">
-						
-						<!-- Modal content-->
-						<div class="modal-content">
-							<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Update form</h4>
-							</div>
-							<div class="modal-body">
-								<div class="imgcontainer">
-									<img src="<?php echo base_url().'acara/'.$u->gambar ?>" class="avatar" style="width: 250px; margin-bottom: 20px; margin-left: 28%;">
-								</div>
-								<?php echo form_open_multipart('Activity/update');?>
-									<div id="signupform" class="form-horizontal" role="form">
-										
-										<div id="signupalert" style="display:none" class="alert alert-danger">
-											<p>Error:</p>
-											<span></span>
-										</div>
-
-					
-										<div class="form-group" style="margin-left: 68px!important;">
-											<label>Add Picture</label>
-											<div class="input-group">
-												<span class="input-group-btn">
-													<span class="btn btn-default btn-file">
-														Browse… <input name="picture" type="file" id="imgInp">
-													</span>
-												</span>
-												<input id='urlname' type="text" style="height: 34px!important; width: 97%;" readonly>
-											</div>
-											<img id='img-upload'/>
-										</div>
-
-
-										<div class="form-group">
-											<label for="title" class="col-md-3 control-label">Title</label>
-											<div class="col-md-9">
-												<input type="text" class="form-control" name="title" value="<?php echo $u->title; ?>">
-											</div>
-										</div>
-											
-										<div class="form-group">
-											<label for="date" class="col-md-3 control-label">Date</label>
-											<div class="col-md-9">
-												<input type="date" class="form-control" name="date" value="<?php echo $u->tanggal; ?>">
-											</div>
-										</div>
-										<div class="form-group">
-											<label for="location" class="col-md-3 control-label">Location</label>
-											<div class="col-md-9">
-												<input type="text" class="form-control" name="location" value="<?php echo $u->tempat; ?>">
-											</div>
-										</div>
-										<div class="form-group">
-											<label for="description" class="col-md-3 control-label">Description</label>
-											<div class="col-md-9">
-												<textarea name="description" rows="50" cols="50"> <?php echo $u->description; ?></textarea>
-											</div>
-										</div>
-
-										<div class="form-group">
-											<!-- Button -->                                        
-											<div class="col-md-offset-3 col-md-9">
-												<button id="btn-signup" type="submit" name="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp; Submit</button>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-						
-						</div>
-					</div>
 
 
 				<?php

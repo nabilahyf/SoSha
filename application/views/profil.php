@@ -41,13 +41,15 @@
 								
 								<!-- onepage-menu -->
 								<ul class="onepage-menu">
-									<li class="current-menu-item"><a href="<?php echo base_url('Activity');?>" style="color: #333;">List Activity</a>
+									<li><a href="<?php echo base_url('Activity');?>" style="color: #333;">All Activity</a>
+									</li>
+									<li><a href="<?php echo base_url('Activity/mine');?>" style="color: #333;">Mine</a>
 									</li>
 									<li><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>
-									<li><a href="#id-3" style="color: #333;">Joined</a>
+									<li><a href="#id-3" style="color: #333;">Joined <sup style="font-size: 8pt; color: red;"> NEW</sup></a>
 									</li>
-									<li><a href="<?php echo base_url('Welcome/logout');?>" style="color: red;">Logout</a>
+									<li><a href="<?php echo base_url('Welcome/logout');?>" style="color: orange;">Logout</a>
 									</li>
 								</ul><!-- onepage-menu -->
 								

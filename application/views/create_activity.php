@@ -86,7 +86,7 @@
                                                 Browse… <input name="picture" type="file" id="imgInp">
                                             </span>
                                         </span>
-                                        <input id='urlname' type="text" style="height: 34px!important; width: 79%" readonly>
+                                        <input id='urlname' type="text" style="height: 34px!important; width: 79%;; font-size: 9pt; color :#666;" readonly>
                                 <button id="clear" class="btn btn-default">Clear</button>
                                     </div>
                                     <img id='img-upload'/>
@@ -96,26 +96,26 @@
                                 <div class="form-group">
                                     <label for="title" class="col-md-3 control-label">Title</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="title">
+                                        <input type="text" class="form-control" style="font-size: 9pt; color: #666;" name="title">
                                     </div>
                                 </div>
                                     
                                 <div class="form-group">
                                     <label for="date" class="col-md-3 control-label">Date</label>
                                     <div class="col-md-9">
-                                        <input type="date" class="form-control" name="date">
+                                        <input type="date" class="form-control" style="font-size: 9pt; color: #666;" name="date">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="location" class="col-md-3 control-label">Location</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="location">
+                                        <input type="text" class="form-control" style="font-size: 9pt; color: #666;" name="location">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="description" class="col-md-3 control-label">Description</label>
                                     <div class="col-md-9">
-                                        <textarea name="description" rows="50" cols="50"></textarea>
+                                        <textarea name="description" style="font-size: 9pt; color: #666;" rows="50" cols="50"></textarea>
                                     </div>
                                 </div>
 

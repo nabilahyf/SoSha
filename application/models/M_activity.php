@@ -38,4 +38,25 @@ class M_activity extends CI_Model{
 		$this->db->order_by("kegiatan_id", "desc");
 		return $query = $this->db->get('kegiatan',$number,$offset)->result();
 	}
+
+	function read_kegiatan($id){	
+		$result = $this->db->where('kegiatan_id', $id)->limit(1)->get('kegiatan');
+		return $result->row();		
+	}
+	
+	function update_data($id,$data){
+		$checkupdate = false;
+		
+		try{
+			$this->db->where('kegiatan_id',$id);
+			$this->db->update('kegiatan',$data);
+			$checkupdate = true;
+		}catch (Exception $ex) {
+			
+			$checkupdate = false;
+		}
+		
+		return $checkupdate; 
+		
+	}
 }
