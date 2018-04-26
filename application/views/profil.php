@@ -31,7 +31,7 @@
 			<header class="header " style="box-shadow: 0 4px 2px -2px #ccc;">
 				<div class="container">
 					<div class="header__inner">
-						<div class="header__logo"><a href="<?php echo base_url('Activity/profile');?>" style="font-size: 11.5pt;">
+						<div class="header__logo"><a href="" style="font-size: 11.5pt;">
                             <img src="<?php echo base_url().'profile/'.$foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
                             &emsp; <?php echo "Welcome <i style='color: #999;'>".$full_name."</i>"; ?></a></div>
 						<div class="header__menu">
@@ -41,15 +41,13 @@
 								
 								<!-- onepage-menu -->
 								<ul class="onepage-menu">
-									<li><a href="<?php echo base_url('Activity');?>" style="color: #333;">All Activity</a>
+									<li class="current-menu-item"><a href="<?php echo base_url('Activity');?>" style="color: #333;">List Activity</a>
 									</li>
-									<li><a href="<?php echo base_url('Activity/mine');?>" style="color: #333;">Mine</a>
+									<li><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>
-									<li class="current-menu-item"><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
+									<li><a href="#id-3" style="color: #333;">Joined</a>
 									</li>
-									<li><a href="#id-3" style="color: #333;">Joined <sup style="font-size: 8pt; color: red;"> NEW</sup></a>
-									</li>
-									<li><a href="<?php echo base_url('Welcome/logout');?>" style="color: orange;">Logout</a>
+									<li><a href="<?php echo base_url('Welcome/logout');?>" style="color: red;">Logout</a>
 									</li>
 								</ul><!-- onepage-menu -->
 								
@@ -61,77 +59,45 @@
 				</div>
 			</header><!-- End / header -->
 
-
-            <div class="container" style="padding-bottom: 50px;">   
-                <div id="signupbox" style="margin-top:30px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <div class="panel-title">Create an Activity</div>
-                        </div>  
-                        <div class="panel-body" >
-                        <?php echo form_open_multipart('Activity/create');?>
-                            <div id="signupform" class="form-horizontal" role="form">
-                                
-                                <div id="signupalert" style="display:none" class="alert alert-danger">
-                                    <p>Error:</p>
-                                    <span></span>
-                                </div>
-
-                                  
-                                <div class="form-group" style="margin-left: 50px!important;">
-                                    <label>Add Picture</label>
-                                    <div class="input-group">
-                                        <span class="input-group-btn">
-                                            <span class="btn btn-default btn-file">
-                                                Browse… <input name="picture" type="file" id="imgInp">
-                                            </span>
-                                        </span>
-                                        <input id='urlname' type="text" style="height: 34px!important; width: 79%" readonly>
-                                <button id="clear" class="btn btn-default">Clear</button>
-                                    </div>
-                                    <img id='img-upload'/>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="title" class="col-md-3 control-label">Title</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" name="title">
-                                    </div>
-                                </div>
-                                    
-                                <div class="form-group">
-                                    <label for="date" class="col-md-3 control-label">Date</label>
-                                    <div class="col-md-9">
-                                        <input type="date" class="form-control" name="date">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="location" class="col-md-3 control-label">Location</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" name="location">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="description" class="col-md-3 control-label">Description</label>
-                                    <div class="col-md-9">
-                                        <textarea name="description" rows="50" cols="50"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <!-- Button -->                                        
-                                    <div class="col-md-offset-3 col-md-9">
-                                        <button id="btn-signup" type="submit" name="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp; Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                         </div>
-                    </div>
-                </div> 
-            </div>
-    
+			<div class="container" style="padding-bottom: 50px;"> 
+					<h4>My Profile</h4>
+					<div class="row">
+						<div class="span2" style="padding-top: 5%;" "padding-left: 5%;">
+						<img src="<?php echo base_url().'profile/'.$foto; ?>"  alt="" class="col-md-3">
+						</div>
+					<div class="col-md-3">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>Name</td>
+                        <td><?php echo $full_name; ?></td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><?php echo $email; ?></td>
+                      </tr>
+                      <tr>
+                        <td>Alamat</td>
+                        <td><?php echo $alamat; ?></td>
+                      </tr>
+                      <tr>
+                        <td>No Telp</td>
+                        <td><?php echo $no_tlp; ?></td>
+                      </tr>
+                      <tr>
+                        <td>Jenis Kelamin</td>
+                        <td><?php echo $jenkel; ?></td>
+                      </tr>
+                      <tr>
+                        <td>TTL</td>
+                        <td><?php echo $birthday; ?></td>
+                      </tr>
+                    </tbody>
+                  </table>
+				  </div>
+				  </div>
+			</div>
+          
 			
 			<!-- footer -->
 			<div class="footer">
