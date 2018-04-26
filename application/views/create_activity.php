@@ -43,7 +43,7 @@
 								<ul class="onepage-menu">
 									<li><a href="<?php echo base_url('Activity');?>" style="color: #333;">All Activity</a>
 									</li>
-									<li><a href="#id-2" style="color: #333;">Mine</a>
+									<li><a href="<?php echo base_url('Activity/mine');?>" style="color: #333;">Mine</a>
 									</li>
 									<li class="current-menu-item"><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>

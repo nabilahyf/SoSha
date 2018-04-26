@@ -106,7 +106,7 @@
 							<div class="modal-body">
 							<?php echo form_open_multipart('Welcome/login');?>
 								<div class="imgcontainer">
-									<img src="assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
+									<img src="/SoSha/assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
 								</div>
 
 									<label for="email"><b>Email</b></label>
