@@ -45,7 +45,7 @@ class M_activity extends CI_Model{
 	}
 
     function data_join($number,$offset,$user_id){
-		$this->db->select('kegiatan.*, user.full_name');
+		$this->db->select('kegiatan.*, user.full_name, ikut_kegiatan.ikut_id');
 		$this->db->where('ikut_kegiatan.user_id',$user_id);
 		$this->db->join('ikut_kegiatan', 'kegiatan.kegiatan_id = ikut_kegiatan.kegiatan_id');
 		$this->db->join('user', 'kegiatan.user_id = user.user_id');
@@ -88,6 +88,20 @@ class M_activity extends CI_Model{
 		return $checkupdate; 
 	}
 
+	function delete_join($id){
+		$checkupdate = false;
+		
+		try{
+			$this->db->where('ikut_id',$id);
+			$this->db->delete('ikut_kegiatan');
+			$checkupdate = true;
+		}catch (Exception $ex) {			
+			$checkupdate = false;
+		}
+		
+		return $checkupdate; 
+	}
+
 	function all_kegiatan(){
 		$result = $this->db->get('kegiatan')->result();
 		return $result;
@@ -97,7 +111,25 @@ class M_activity extends CI_Model{
 		$checkupdate = false;
 		
 		try{
-			$this->db->query('UPDATE kegiatan SET slot = slot - 1 WHERE kegiatan_id ='.$id);
+			$this->db->set('slot', 'slot-1', FALSE);;
+			$this->db->where('kegiatan_id', $id);
+			$this->db->update('kegiatan');
+			$checkupdate = true;
+		}catch (Exception $ex) {			
+			$checkupdate = false;
+		}
+		
+		return $checkupdate; 
+
+	}
+
+	function return_kuota($id){
+		$checkupdate = false;
+		
+		try{
+			$this->db->set('slot', 'slot+1', FALSE);;
+			$this->db->where('kegiatan_id', $id);
+			$this->db->update('kegiatan');
 			$checkupdate = true;
 		}catch (Exception $ex) {			
 			$checkupdate = false;

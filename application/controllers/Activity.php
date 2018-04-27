@@ -393,7 +393,7 @@ class Activity extends CI_Controller {
 		}else{		
 			
 			$this->load->database();
-			$UpdateKuota = $this->M_activity->update_viewed($id);
+			$UpdateKuota = $this->M_activity->update_kuota($id);
 
 			$data = array(        
 				'kegiatan_id'	=> $id,
@@ -486,6 +486,24 @@ class Activity extends CI_Controller {
 			
 		}
 
+	}
+
+	function delete_join(){
+		if($this->session->email==NULL){
+			redirect('Welcome');
+		}
+
+		$result = $this->M_activity->delete_join($this->uri->segment(3));
+
+		$result = $this->M_activity->return_kuota($this->uri->segment(4));
+
+		if(!$result){
+			?>
+				<script>alert('proses bermasalah');</script>
+			<?php
+		}else{
+			redirect('Activity/page_join');
+		}
 	}
     
 }
