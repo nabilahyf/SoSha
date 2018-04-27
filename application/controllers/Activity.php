@@ -11,8 +11,24 @@ class Activity extends CI_Controller {
 	{
 		if($this->session->user_id==NULL){
 			redirect('Welcome');	
-		}else{						
+		}else{			
 			$this->load->database();
+			$statusJoin = $this->M_activity->status_join($this->session->user_id);
+			if($statusJoin ==  NULL){
+				$newdata = array(
+					'status_join' 		=> 0
+				);
+
+				$this->session->set_userdata($newdata);
+			}else{
+				$newdata = array(
+					'status_join' 		=> 1
+				);
+
+				$this->session->set_userdata($newdata);
+			}
+
+
 			$jumlah_data = $this->M_activity->jumlah_data();
 			$this->load->library('pagination');
 			$config['base_url'] = base_url().'Activity/index/'; //memanggil class dan fungsi untuk menjalankan pagination
@@ -57,7 +73,25 @@ class Activity extends CI_Controller {
 	{
 		if($this->session->user_id==NULL){
 			redirect('Welcome');	
-		}else{						
+		}else{					
+			$this->load->database();
+			$statusJoin = $this->M_activity->status_join($this->session->user_id);
+			if($statusJoin ==  NULL){
+				$newdata = array(
+					'status_join' 		=> 0
+				);
+
+				$this->session->set_userdata($newdata);
+			}else{
+				$newdata = array(
+					'status_join' 		=> 1
+				);
+
+				$this->session->set_userdata($newdata);
+			}
+
+
+								
 			$data = array(
 				'user_id' 		=> $this->session->user_id,
 				'foto'			=> $this->session->foto,	
@@ -74,7 +108,7 @@ class Activity extends CI_Controller {
 
 	function detail()
 	{
-		if($this->session->kegiatan_id==NULL){
+		if($this->session->user_id==NULL){
 			redirect('Welcome');
 		}else{
 			$data = array(
@@ -97,7 +131,24 @@ class Activity extends CI_Controller {
 		if($this->session->user_id==NULL){
 			redirect('Welcome');	
 		}else{		
+			$this->load->database();
+			$statusJoin = $this->M_activity->status_join($this->session->user_id);
+			if($statusJoin ==  NULL){
+				$newdata = array(
+					'status_join' 		=> 0
+				);
 
+				$this->session->set_userdata($newdata);
+			}else{
+				$newdata = array(
+					'status_join' 		=> 1
+				);
+
+				$this->session->set_userdata($newdata);
+			}
+
+
+			
 			$result = $this->M_activity->all_kegiatan();
 			$data['lokasi'] = $result;
 			$this->load->view('create_activity', $data);
@@ -148,8 +199,24 @@ class Activity extends CI_Controller {
 	function mine(){
 		if($this->session->user_id==NULL){
 			redirect('Welcome');	
-		}else{						
+		}else{					
 			$this->load->database();
+			$statusJoin = $this->M_activity->status_join($this->session->user_id);
+			if($statusJoin ==  NULL){
+				$newdata = array(
+					'status_join' 		=> 0
+				);
+
+				$this->session->set_userdata($newdata);
+			}else{
+				$newdata = array(
+					'status_join' 		=> 1
+				);
+
+				$this->session->set_userdata($newdata);
+			}
+
+
 			$jumlah_data = $this->M_activity->jumlah_data_mine($this->session->user_id);
 			$this->load->library('pagination');
 			$config['base_url'] = base_url().'Activity/mine/index/'; //memanggil class dan fungsi untuk menjalankan pagination
@@ -195,6 +262,24 @@ class Activity extends CI_Controller {
 		if($this->session->user_id==NULL){
 			redirect('Welcome');	
 		}else{
+			$this->load->database();
+			$statusJoin = $this->M_activity->status_join($this->session->user_id);
+			if($statusJoin ==  NULL){
+				$newdata = array(
+					'status_join' 		=> 0
+				);
+
+				$this->session->set_userdata($newdata);
+			}else{
+				$newdata = array(
+					'status_join' 		=> 1
+				);
+
+				$this->session->set_userdata($newdata);
+			}
+
+
+			
 			
 			$checkKegiatan = $this->M_activity->read_kegiatan($id);	
 			$kegiatan = array(
@@ -299,6 +384,108 @@ class Activity extends CI_Controller {
 		}else{
 			redirect('Activity');
 		}
+	}
+
+	function join($id){
+
+		if($this->session->user_id==NULL){
+			redirect('Welcome');	
+		}else{		
+			
+			$this->load->database();
+			$UpdateKuota = $this->M_activity->update_viewed($id);
+
+			$data = array(        
+				'kegiatan_id'	=> $id,
+				'user_id'		=> $this->session->user_id,
+				'view'	 		=> '0',     
+				'joined_at'		=> date('Y-m-d H:i:s')
+			);    
+
+			$result = $this->M_activity->join($data);
+
+			$newdata = array(
+				'status_join' 		=> 0
+			);
+			$this->session->set_userdata($newdata);
+		
+			$data = NULL;
+			if($result){			
+				redirect('Activity');	
+			}else{			
+				redirect('Activity');	
+			}
+		}
+	}
+
+	function page_join(){
+
+		if($this->session->user_id==NULL){
+			redirect('Welcome');	
+		}else{		
+			$this->load->database();
+			
+			$UpdateViewed = $this->M_activity->update_viewed();
+
+			$statusJoin = $this->M_activity->status_join($this->session->user_id);
+			if($statusJoin ==  NULL){
+				$newdata = array(
+					'status_join' 		=> 0
+				);
+
+				$this->session->set_userdata($newdata);
+			}else{
+				$newdata = array(
+					'status_join' 		=> 1
+				);
+
+				$this->session->set_userdata($newdata);
+			}
+
+
+
+
+
+			$jumlah_data = $this->M_activity->jumlah_data_join($this->session->user_id);
+			$this->load->library('pagination');
+			$config['base_url'] = base_url().'Activity/join/index/'; //memanggil class dan fungsi untuk menjalankan pagination
+			$config['total_rows'] = $jumlah_data;
+			$config['per_page'] = 5;
+			if($this->uri->segment(3)){
+				$from = $this->uri->segment(3);
+			}else{ 
+				$from = 0;
+			}
+
+			//Tambahan untuk styling      
+			$choice = $config["total_rows"] / $config["per_page"];
+			$config["num_links"] = floor($choice);
+			$config['first_link']       = 'First';
+			$config['last_link']        = 'Last';
+			$config['next_link']        = 'Next';
+			$config['prev_link']        = 'Prev';
+			$config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+			$config['full_tag_close']   = '</ul></nav></div>';
+			$config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
+			$config['num_tag_close']    = '</span></li>';
+			$config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';
+			$config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
+			$config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
+			$config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
+			$config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
+			$config['prev_tagl_close']  = '</span>Next</li>';
+			$config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
+			$config['first_tagl_close'] = '</span></li>';
+			$config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
+			$config['last_tagl_close']  = '</span></li>';
+		
+			$this->pagination->initialize($config);		
+			$data['kegiatan'] = $this->M_activity->data_join($config['per_page'],$from,$this->session->user_id);
+			
+			$this->load->view('joined',$data);
+			
+		}
+
 	}
     
 }

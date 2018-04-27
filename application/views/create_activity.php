@@ -47,7 +47,13 @@
 									</li>
 									<li class="current-menu-item"><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>
-									<li><a href="#id-3" style="color: #333;">Joined <sup style="font-size: 8pt; color: red;"> NEW</sup></a>
+									<li><a href="<?php echo base_url('Activity/page_join'); ?>" style="color: #333;">Joined 
+										<?php if($this->session->status_join == 1){
+												echo "<sup style='font-size: 8pt; color: red;'> NEW</sup></a>";
+											   }else{
+												echo "<sup style='font-size: 8pt; color: blue;'></sup></a>";												   
+											   }
+										?>
 									</li>
 									<li><a href="<?php echo base_url('Welcome/logout');?>" style="color: orange;">Logout</a>
 									</li>

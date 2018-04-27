@@ -47,7 +47,13 @@
 									</li>
 									<li><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>
-									<li><a href="#id-3" style="color: #333;">Joined <sup style="font-size: 8pt; color: red;"> NEW</sup></a>
+									<li><a href="<?php echo base_url('Activity/page_join'); ?>" style="color: #333;">Joined 
+										<?php if($this->session->status_join == 1){
+												echo "<sup style='font-size: 8pt; color: red;'> NEW</sup></a>";
+											   }else{
+												echo "<sup style='font-size: 8pt; color: blue;'></sup></a>";												   
+											   }
+										?>
 									</li>
 									<li><a href="<?php echo base_url('Welcome/logout');?>" style="color: orange;">Logout</a>
 									</li>
@@ -91,7 +97,7 @@
 					<div class="col-lg-6" style="text-align: right; right: -60px;">
 						<?php
 							if($u->user_id != $this->session->user_id){
-								echo "<a href='#' style='color: orange;'>Join</a>";
+								echo "<a href='".base_url()."Activity/join/".$u->kegiatan_id."' style='color: orange;'>Join</a>";
 							}else{
 								echo "<a href='".base_url()."Activity/page_update/".$u->kegiatan_id."' >Update</a> | <a href='".base_url()."Activity/delete/".$u->kegiatan_id."'>Delete</a>";
 							}

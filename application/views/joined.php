@@ -47,9 +47,11 @@
 									</li>
 									<li><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>
-									<li><a href="<?php echo base_url('Activity/page_join'); ?>" style="color: #333;">Joined 
+									<li class="current-menu-item"><a href="<?php echo base_url('Activity/page_join'); ?>" style="color: #333;">Joined 
 										<?php if($this->session->status_join == 1){
 												echo "<sup style='font-size: 8pt; color: red;'> NEW</sup></a>";
+											   }else{
+												echo "<sup style='font-size: 8pt; color: blue;'></sup></a>";												   
 											   }
 										?>
 									</li>
@@ -66,91 +68,51 @@
 			</header><!-- End / header -->
 
 
-            <div class="container" style="padding-bottom: 50px;">   
-                <div id="signupbox" style="margin-top:30px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <div class="panel-title">Updating Activity</div>
-                        </div>  
-                        <div class="panel-body" >
-                        <?php echo form_open_multipart('Activity/update');?>
-                            <div id="signupform" class="form-horizontal" role="form">
-                                
-                                <div id="signupalert" style="display:none" class="alert alert-danger">
-                                    <p>Error:</p>
-                                    <span></span>
-                                </div>
+            <div class="container" style="padding-bottom: 20px; padding-top: 50px;"> 
 
-								<img src="<?php echo base_url().'acara/'.$gambar; ?>" style="width: 250px; margin-left: 25%; margin-bottom: 30px; margin-top: 20px;">
+                
+				<?php 
+					foreach($kegiatan as $u){ 
+				?>
 
-                                  
-                                <div class="form-group" style="margin-left: 50px!important;">
-                                    <label>Add Picture</label>
-                                    <div class="input-group">
-                                        <span class="input-group-btn">
-                                            <span class="btn btn-default btn-file">
-                                                Browse… <input name="picture" type="file" id="imgInp">
-                                            </span>
-                                        </span>
-                                        <input id='urlname' type="text" style="height: 34px!important; width: 79%; font-size: 9pt; color: #666;" readonly>
-                                <button id="clear" class="btn btn-default">Clear</button>
-                                    </div>
-                                    <img id='img-upload'/>
-                                </div>
-
-
-                                        <input type="hidden" name="kegiatan_id" value="<?php echo $kegiatan_id; ?>">
-                                        <input type="hidden" name="old_gambar" value="<?php echo $gambar; ?>">
+				<div class="col-lg-12" style="border-bottom: 1px solid #ccc; padding-bottom: 20px;">
+					<div class="col-lg-2" style="margin-left: -28px;">
+						<img src="<?php echo base_url().'acara/'.$u->gambar ?>">
+					</div>
+					<div class="col-lg-5" style="margin-top: -5px; font-size: 9.5pt;">
+						Judul &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; : <?php echo $u->title; ?><br/>
+						Penyelenggara &emsp; : <?php echo $u->full_name; ?> <br/>
+						Lokasi&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: <?php echo $u->tempat; ?> <br/>
+						Tanggal &emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;:  <?php echo $u->tanggal; ?><br/>
+						Sisa Kuota &emsp;&emsp;&emsp;&ensp;&nbsp;:  <?php echo $u->slot; ?>
+					</div>
+					<div class="col-lg-5" style="margin-top: -5px; right: -50px; font-size: 9.5pt; max-height: 100px; overflow-y: auto;">
+						<?php echo $u->description; ?>
+					</div>
+				</div>         
+				<div class="col-lg-12" style="margin-bottom: 50px;">
+					<div class="col-lg-6" style="margin-left: -30px;">
+						Created at :  <?php echo $u->created_at; ?>
+					</div>
+					<div class="col-lg-6" style="text-align: right; right: -60px;">
+					<a href="<?php echo base_url().'Activity/page_detail/'.$u->kegiatan_id; ?>">Details</a> | <a href="<?php echo base_url().'Activity/delete/'.$u->kegiatan_id; ?>">Delete</a>
+					</div>
+				</div>
 
 
-                                <div class="form-group">
-                                    <label for="title" class="col-md-3 control-label">Title</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" style="font-size: 9pt; color: #666;" name="title" value="<?php echo $title; ?>">
-                                    </div>
-                                </div>
-                                    
-                                <div class="form-group">
-                                    <label for="date" class="col-md-3 control-label">Date</label>
-                                    <div class="col-md-9">
-                                        <input type="date" class="form-control" style="font-size: 9pt; color: #666;" name="date" value="<?php echo $tanggal; ?>">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="location" class="col-md-3 control-label">Location</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" style="font-size: 9pt; color: #666;" name="location" value="<?php echo $tempat; ?>">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="slot" class="col-md-3 control-label">Kuota</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" style="font-size: 9pt; color: #666;" name="slot" value="<?php echo $slot; ?>">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="description" class="col-md-3 control-label">Description</label>
-                                    <div class="col-md-9">
-                                        <textarea name="description" style="font-size: 9pt; color: #666;" rows="50" cols="50"> <?php echo $description; ?></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <!-- Button -->                                        
-                                    <div class="col-md-offset-3 col-md-9">
-                                        <button id="btn-signup" type="submit" name="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp; Update</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                         </div>
-                    </div>
-                </div> 
+				<?php
+					}
+				?>
             </div>
+
+
+                <?php 
+                  echo $this->pagination->create_links();
+                ?>
     
 			
 			<!-- footer -->
-			<div class="footer">
+			<div class="footer" style="margin-top: 50px;">
 				<div id="back-to-top"><i class="pe-7s-angle-up"></i></div>
 				<div class="container">
 					<div class="footer__wrapper">
