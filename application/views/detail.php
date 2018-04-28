@@ -33,7 +33,7 @@
 					<div class="header__inner">
 						<div class="header__logo"><a href="<?php echo base_url('Activity/profile');?>" style="font-size: 11.5pt;">
                             <img src="<?php echo base_url().'profile/'.$this->session->foto; ?>" style="width: 50px; border-radius: 50%; box-shadow: 0px 0px 1px 1px #ccc;"> 
-                            &emsp; <?php echo "Welcome <i style='color: #999;'>".$this->session->full_name."</i>"; ?></a></div>
+                            &emsp; <?php echo "Welcome <i style='color: #ccc;'><sub>".$this->session->full_name."</sub></i>"; ?></a></div>
 						<div class="header__menu">
 							
 							<!-- onepage-nav -->
@@ -47,7 +47,7 @@
 									</li>
 									<li><a href="<?php echo base_url('Activity/page_create');?>" style="color: #333;">Create Activity</a>
 									</li>
-									<li class="current-menu-item"><a href="<?php echo base_url('Activity/page_join'); ?>" style="color: #333;">Joined 
+									<li><a href="<?php echo base_url('Activity/page_join'); ?>" style="color: #333;">Joined 
 										<?php if($this->session->status_join == 1){
 												echo "<sup style='font-size: 8pt; color: red;'> NEW</sup></a>";
 											   }else{
