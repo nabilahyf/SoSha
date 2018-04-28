@@ -73,7 +73,7 @@
 						<div class="row">
 							<div class="span2 col-lg-6" style="padding-top: 5%;" "padding-left: 5%;">
 								<img src="<?php echo base_url().'profile/'.$foto; ?>"  alt="" class="col-lg-12" style='margin-top: -30px; margin-left: -15px;'><br/>
-								<a href="#" onclick="$('#update_profil').fadeToggle('slow')">Update Profil</a> | <a href='#'>Change Password</a>
+								<a href="#" onclick="$('#update_profil').fadeToggle('slow'); $('#update_password').hide('slow');">Update Profil</a> | <a href='#' onclick="$('#update_password').fadeToggle('slow');$('#update_profil').hide('slow');">Change Password</a>
 							</div>
 						<div class="col-lg-6">
 							<table class="table">
@@ -107,6 +107,7 @@
 						</div>
 					</div>
 				</div>
+
 				<div class='col-lg-6' id='update_profil' style='display: none;'>
 					<?php echo form_open_multipart('Activity/update_profil');?>
 						<div class="modal-body" style="height: 235px; overflow-y: auto; padding: 0 20px 20px 20px; margin-top: 10%;">
@@ -166,7 +167,31 @@
 						</div>
 
 						<div class="modal-footer">
-						<button type="submit" name="regist_volunteer" class="btn btn-default">Submit</button>
+						<button type="submit" name="update" class="btn btn-default">Submit</button>
+						</div>
+					</form>
+				</div>
+
+				<div class='col-lg-6' id='update_password' style='display: none;'>
+					<?php echo form_open_multipart('Activity/update_password');?>
+						<div class="modal-body" style="height: 235px; overflow-y: auto; padding: 0 20px 20px 20px; margin-top: 10%;">
+															
+							
+							<input type="hidden" name="id" value="<?php echo $user_id; ?>" required>
+
+							<label for="old"><b>Old password</b></label>
+							<input type="password" name="old" required>
+
+							<label for="new"><b>New password</b></label>
+							<input type="password" name="new" required>
+
+							<label for="retype"><b>Retype password</b></label>
+							<input type="password" name="retype" required>
+								
+						</div>
+
+						<div class="modal-footer">
+						<button type="submit" name="update" class="btn btn-default">Submit</button>
 						</div>
 					</form>
 				</div>

@@ -160,6 +160,29 @@ class Activity extends CI_Controller {
 
 	}
 
+	function update_password(){
+		if($this->session->user_id==NULL){
+			redirect('Welcome');	
+		}					
+			$this->load->database();
+
+				$user_id = $this->input->post('id');
+				$data = array(            
+				'password' 		=> md5($this->input->post('new'))
+				);
+
+			$cek = $this->M_user->read_data_update($this->session->email);	
+
+			if(md5($this->input->post('old')) != $cek->password){
+				redirect('Activity/profile');
+			}else if(md5($this->input->post('retype')) != md5($this->input->post('new'))){
+				redirect('Activity/profile');
+			}else{
+				$updated = $this->M_activity->update_profil($user_id, $data);
+				redirect('Welcome/logout');		
+			}
+	}
+
 	function detail($id)
 	{
 		if($this->session->user_id==NULL){
