@@ -29,7 +29,7 @@ class Activity extends CI_Controller {
 			}
 
 
-			$jumlah_data = $this->M_activity->jumlah_data();
+			$jumlah_data = $this->M_activity->jumlah_data($this->session->user_id);
 			$this->load->library('pagination');
 			$config['base_url'] = base_url().'Activity/index/'; //memanggil class dan fungsi untuk menjalankan pagination
 			$config['total_rows'] = $jumlah_data;
@@ -63,7 +63,7 @@ class Activity extends CI_Controller {
 			$config['last_tagl_close']  = '</span></li>';
 		
 			$this->pagination->initialize($config);		
-			$data['kegiatan'] = $this->M_activity->data($config['per_page'],$from);
+			$data['kegiatan'] = $this->M_activity->data($config['per_page'],$from,$this->session->user_id);
 			
 			$this->load->view('list_activity',$data);
 		}

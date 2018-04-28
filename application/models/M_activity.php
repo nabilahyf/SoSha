@@ -29,11 +29,24 @@ class M_activity extends CI_Model{
 		return $this->db->get('ikut_kegiatan')->num_rows();
 	}
 
-    function data($number,$offset){
-		$this->db->select('*');
-		$this->db->join('user', 'kegiatan.user_id = user.user_id');
-		$this->db->order_by("kegiatan_id", "desc");
-		return $query = $this->db->get('kegiatan',$number,$offset)->result();
+    function data($number,$offset,$user_id){
+		$result = $this->db->where('user_id',$user_id)->get('ikut_kegiatan');
+		
+		if ($result->num_rows()) {
+			$this->db->select('kegiatan.*, user.full_name');
+			$this->db->where('slot >', '0');
+			$this->db->where('kegiatan_id != (SELECT kegiatan_id FROM ikut_kegiatan WHERE user_id ='.$user_id.')');
+			$this->db->join('user', 'kegiatan.user_id = user.user_id');
+			$this->db->order_by("kegiatan_id", "desc");
+			return $query = $this->db->get('kegiatan',$number,$offset)->result();
+		} else {
+			$this->db->select('kegiatan.*, user.full_name');
+			$this->db->where('slot >', '0');
+			$this->db->join('user', 'kegiatan.user_id = user.user_id');
+			$this->db->order_by("kegiatan_id", "desc");
+			return $query = $this->db->get('kegiatan',$number,$offset)->result();
+		}
+		
 	}
 
     function data_mine($number,$offset,$user_id){
