@@ -99,7 +99,7 @@
 							if($u->user_id != $this->session->user_id){
 								echo "<a href='".base_url()."Activity/join/".$u->kegiatan_id."' style='color: orange;'>Join</a>";
 							}else{
-								echo "<a href='".base_url()."Activity/page_update/".$u->kegiatan_id."' >Update</a> | <a href='".base_url()."Activity/delete/".$u->kegiatan_id."'>Delete</a>";
+								echo "<a href='".base_url()."Activity/page_update/".$u->kegiatan_id."' >Update</a> | <a href='".base_url()."Activity/delete/".$u->kegiatan_id."' style='color: red;'>Delete</a>";
 							}
 						?>
 					</div>

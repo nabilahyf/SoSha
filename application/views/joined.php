@@ -95,7 +95,8 @@
 						Created at :  <?php echo $u->created_at; ?>
 					</div>
 					<div class="col-lg-6" style="text-align: right; right: -60px;">
-					<a href="<?php echo base_url().'Activity/delete_join/'.$u->ikut_id.'/'.$u->kegiatan_id; ?>" style="color: red;">Delete</a>
+					<a href="<?php echo base_url().'Activity/detail/'.$u->kegiatan_id; ?>" style="color: green;">Detail </a> &nbsp;|&nbsp; 
+					<a href="<?php echo base_url().'Activity/delete_join/'.$u->ikut_id.'/'.$u->kegiatan_id; ?>" style="color: red;"> Delete</a>
 					</div>
 				</div>
 

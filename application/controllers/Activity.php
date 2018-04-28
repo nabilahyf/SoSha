@@ -106,23 +106,25 @@ class Activity extends CI_Controller {
 		}
 	}
 
-	function detail()
+	function detail($id)
 	{
 		if($this->session->user_id==NULL){
-			redirect('Welcome');
-		}else{
+			redirect('Welcome');	
+		}else{					
+			$this->load->database();
+			$detail = $this->M_activity->detail($id);
+								
 			$data = array(
-				'kegiatan_id'	=> $this->session->kegiatan_id,
-				'user_id'		=> $this->session->user_id,
-				'title'			=> $this->session->title,
-				'gambar'		=> $this->session->gambar,
-				'description'	=> $this->session->description,
-				'tanggal'		=> $this->session->tanggal,
-				'tempat'		=> $this->session->tempat,
-				'created_at'	=> $this->session->created_at,
-				'updated_at'	=> $this->session->updated_at
+				'judul' 		=> $detail->title,
+				'penyelenggara'	=> $detail->full_name,
+				'gambar'		=> $detail->gambar,	
+				'deskripsi'		=> $detail->description,
+				'tanggal'		=> $detail->tanggal,
+				'lokasi'		=> $detail->tempat,
+				'kuota'			=> $detail->slot,
+				'created'		=> $detail->created_at
 			);
-			$this-load-view('detail_activity', $data);
+			$this->load->view('detail', $data);
 		}
 	}
 	

@@ -205,4 +205,13 @@ class M_activity extends CI_Model{
 		$result = $this->db->query('SELECT * FROM ikut_kegiatan WHERE view = 0 AND user_id = '.$user_id);
 		return $result->row();		
 	}
+
+
+	function detail($id){
+		$this->db->select('kegiatan.*, user.full_name');
+		$this->db->where('kegiatan.kegiatan_id',$id);
+		$this->db->join('user', 'kegiatan.user_id = user.user_id');
+		$this->db->order_by("kegiatan_id", "desc");
+		return $query = $this->db->get('kegiatan')->row();
+	}
 }
