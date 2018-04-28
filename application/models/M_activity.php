@@ -108,6 +108,22 @@ class M_activity extends CI_Model{
 		return $checkupdate; 
 		
 	}
+	
+	function update_profil($id,$data){
+		$checkupdate = false;
+		
+		try{
+			$this->db->where('user_id',$id);
+			$this->db->update('user',$data);
+			$checkupdate = true;
+		}catch (Exception $ex) {
+			
+			$checkupdate = false;
+		}
+		
+		return $checkupdate; 
+		
+	}
 
 	function delete_data($id){
 		$checkupdate = false;

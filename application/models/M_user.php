@@ -19,4 +19,9 @@ class M_user extends CI_Model{
 		$result = $this->db->where('UPPER(email)', strtoupper($email))->where('password',md5($password))->limit(1)->get('user');
 		return $result->row();		
 	}
+
+	function read_data_update($email){	
+		$result = $this->db->where('UPPER(email)', strtoupper($email))->limit(1)->get('user');
+		return $result->row();		
+	}
 }

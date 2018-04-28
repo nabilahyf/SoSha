@@ -5,6 +5,7 @@ class Activity extends CI_Controller {
 	function __construct(){
 		parent::__construct();		
 		$this->load->model('M_activity'); 
+		$this->load->model('M_user'); 
 	}
 
 	public function index()
@@ -90,20 +91,73 @@ class Activity extends CI_Controller {
 				$this->session->set_userdata($newdata);
 			}
 
-
+			$cek = $this->M_user->read_data_update($this->session->email);	
 								
 			$data = array(
-				'user_id' 		=> $this->session->user_id,
-				'foto'			=> $this->session->foto,	
-				'email' 		=> $this->session->email,
-				'full_name'		=> $this->session->full_name,
-				'alamat'		=> $this->session->alamat,
-				'no_tlp'		=> $this->session->no_tlp,
-				'jenkel'		=> $this->session->jenkel,
-				'birthday'		=> $this->session->birthday
+				'user_id' 		=> $cek->user_id,
+				'foto'			=> $cek->foto,	
+				'email' 		=> $cek->email,
+				'full_name'		=> $cek->full_name,
+				'alamat'		=> $cek->alamat,
+				'no_tlp'		=> $cek->no_tlp,
+				'jenkel'		=> $cek->jenkel,
+				'birthday'		=> $cek->birthday
 			);
+			$this->session->set_userdata($data);
 			$this->load->view('profil', $data);
 		}
+	}
+
+	function update_profil(){
+		$user_id						= $this->input->post('id');
+		$length 						= strlen($_FILES['gambar']['name']);
+		$config['remove_space'] 		= TRUE;
+		$file_name						= time()."_".$_FILES['gambar']['name'];
+		$config['file_name']			= $file_name;
+		$config['upload_path']          = './profile/';
+		$config['allowed_types']        = 'gif|jpg|png|jpeg'; 
+		$config['max_size']             = 2048;
+		// $config['max_width']            = 1024;
+		// $config['max_height']           = 1024;
+ 
+		$this->load->library('upload', $config);
+
+		// Alternately you can set preferences by calling the ``initialize()`` method. Useful if you auto-load the class:
+		$this->upload->initialize($config);
+		if (!$this->upload->do_upload('gambar')){	
+			$data = array(             
+				'email'		=> $this->input->post('email'),  
+				'full_name'	=> $this->input->post('fullname'),  
+				'alamat'	=> $this->input->post('alamat'), 
+				'no_tlp'	=> $this->input->post('tlp'),  
+				'jenkel'	=> $this->input->post('gender'),   
+				'birthday'	=> $this->input->post('ttl')
+			); 
+			$updated = $this->M_activity->update_profil($user_id, $data);
+			if($updated){
+				redirect('Activity/profile');
+			}else{
+				redirect('Activity');				
+			}
+		}else{
+			unlink('./profile/'.$this->input->post('old_profil'));
+			$data = array(            
+				'foto' 		=> $file_name,     
+				'email'		=> $this->input->post('email'),  
+				'full_name'	=> $this->input->post('fullname'),  
+				'alamat'	=> $this->input->post('alamat'), 
+				'no_tlp'	=> $this->input->post('tlp'),  
+				'jenkel'	=> $this->input->post('gender'),   
+				'birthday'	=> $this->input->post('ttl')
+			);    
+			$updated = $this->M_activity->update_profil($user_id, $data);
+			if($updated){
+				redirect('Activity/profile');
+			}else{
+				redirect('Activity');				
+			}
+		}
+
 	}
 
 	function detail($id)

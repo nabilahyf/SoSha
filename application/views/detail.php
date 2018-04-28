@@ -74,7 +74,7 @@
 
 	
             <div class="container" style="padding-bottom: 20px; padding-top: 50px; font-family: Georgia;">
-                <div class="card">
+                <div class="card col-lg-12">
                     <div class="container-fliud">
                         <div class="wrapper row">
                             <div class="preview col-md-6" style="text-align: center; margin-top: 20px;">
@@ -85,7 +85,7 @@
                             <div class="details col-md-6">
                                 <h4 class="product-title" style='margin-top: 10px;'><?php echo $judul ?></h4>
 
-                                <span class="review-no" style="float: right; font-style: italic; font-size: 9pt; text-align: right;">Dibuat pada : <br/><?php echo $created; ?></span>
+                                <span class="review-no" style="float: right; font-style: italic; font-size: 9pt; text-align: right; color: #999;">Dibuat pada : <br/><?php echo $created; ?></span>
 
                                 <span class="review-no">Diselenggarakan oleh : <?php echo $penyelenggara; ?></span>
                                 <div class="rating" style="margin-top: -5px;">
@@ -94,7 +94,8 @@
                                 <p class="review-no" style="margin-top: -20px;">Sisa Kuota : <?php echo $kuota; ?></p>
                                     
                                 </div>
-                                <p class="product-description" style='max-height: 230px; overflow-y: auto; padding-right: 10px;'><?php echo $deskripsi; ?> </p>
+                                <p style='margin-top: -18px; text-align:center; font-size: 13pt;'>Deskripsi</p>
+                                <p class="product-description" style='max-height: 205px; overflow-y: auto; padding-right: 10px; margin-top: -15px; text-align: justify;'><?php echo $deskripsi; ?> </p>
                             </div>
                         </div>
                     </div>

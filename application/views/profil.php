@@ -68,42 +68,108 @@
 			</header><!-- End / header -->
 
 			<div class="container" style="padding-bottom: 50px;"> 
-					<h4>My Profile</h4>
-					<div class="row">
-						<div class="span2" style="padding-top: 5%;" "padding-left: 5%;">
-						<img src="<?php echo base_url().'profile/'.$foto; ?>"  alt="" class="col-md-3">
+				<div class='col-lg-6'>
+						<h4>My Profile</h4>
+						<div class="row">
+							<div class="span2 col-lg-6" style="padding-top: 5%;" "padding-left: 5%;">
+								<img src="<?php echo base_url().'profile/'.$foto; ?>"  alt="" class="col-lg-12" style='margin-top: -30px; margin-left: -15px;'><br/>
+								<a href="#" onclick="$('#update_profil').fadeToggle('slow')">Update Profil</a> | <a href='#'>Change Password</a>
+							</div>
+						<div class="col-lg-6">
+							<table class="table">
+								<tbody>
+								<tr>
+									<td>Name</td>
+									<td><?php echo $full_name; ?></td>
+								</tr>
+								<tr>
+									<td>Email</td>
+									<td><?php echo $email; ?></td>
+								</tr>
+								<tr>
+									<td>Alamat</td>
+									<td><?php echo $alamat; ?></td>
+								</tr>
+								<tr>
+									<td>No Telp</td>
+									<td><?php echo $no_tlp; ?></td>
+								</tr>
+								<tr>
+									<td>Jenis Kelamin</td>
+									<td><?php echo $jenkel; ?></td>
+								</tr>
+								<tr>
+									<td>TTL</td>
+									<td><?php echo $birthday; ?></td>
+								</tr>
+								</tbody>
+							</table>
 						</div>
-					<div class="col-md-3">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>Name</td>
-                        <td><?php echo $full_name; ?></td>
-                      </tr>
-                      <tr>
-                        <td>Email</td>
-                        <td><?php echo $email; ?></td>
-                      </tr>
-                      <tr>
-                        <td>Alamat</td>
-                        <td><?php echo $alamat; ?></td>
-                      </tr>
-                      <tr>
-                        <td>No Telp</td>
-                        <td><?php echo $no_tlp; ?></td>
-                      </tr>
-                      <tr>
-                        <td>Jenis Kelamin</td>
-                        <td><?php echo $jenkel; ?></td>
-                      </tr>
-                      <tr>
-                        <td>TTL</td>
-                        <td><?php echo $birthday; ?></td>
-                      </tr>
-                    </tbody>
-                  </table>
-				  </div>
-				  </div>
+					</div>
+				</div>
+				<div class='col-lg-6' id='update_profil' style='display: none;'>
+					<?php echo form_open_multipart('Activity/update_profil');?>
+						<div class="modal-body" style="height: 235px; overflow-y: auto; padding: 0 20px 20px 20px; margin-top: 10%;">
+															
+							
+							<input type="hidden" name="id" value="<?php echo $user_id; ?>" required>
+							<input type="hidden" name="old_profil" value="<?php echo $foto; ?>" required>
+
+                                  
+							<div class="form-group">
+							<label>Change Picture</label>
+							<div class="input-group">
+								<span class="input-group-btn">
+									<span class="btn btn-default btn-file">
+										Browse… <input name="gambar" type="file" id="imgInp">
+									</span>
+								</span>
+								<input id='urlname' type="text" style="height: 34px!important; width: 83%;; font-size: 9pt; color :#666;" readonly>
+							<button id="clear" class="btn btn-default">Clear</button>
+								</div>
+								<img id='img-upload'/>
+							</div>
+
+							<label for="email"><b>Email</b></label>
+							<input type="email" placeholder="Ketikan email Anda" name="email" value="<?php echo $email; ?>" required>
+
+							<label for="fullname"><b>Full name</b></label>
+							<input type="text" placeholder="Ketikan nama lengkap Anda" name="fullname" value="<?php echo $full_name; ?>" required>
+
+							<label for="tlp"><b>no tlp</b></label>
+							<input type="text" placeholder="Ketikan nomor telepon Anda" name="tlp" value="<?php echo $no_tlp; ?>" required>
+
+							<label for="gender"><b>Jenis Kelamin</b></label>
+							<br/>
+							<?php if(strtoupper($jenkel) == 'L'){?>
+								<input type="radio" name="gender" value="L" checked> Laki-laki<br>
+								<input type="radio" name="gender" value="P"> Perempuan<br>
+								<input type="radio" name="gender" value="O"> Lainnya
+							<?php }else if(strtoupper($jenkel) == 'P'){ ?>
+								<input type="radio" name="gender" value="L"> Laki-laki<br>
+								<input type="radio" name="gender" value="P" checked> Perempuan<br>
+								<input type="radio" name="gender" value="O"> Lainnya
+							<?php }else{ ?>
+								<input type="radio" name="gender" value="L"> Laki-laki<br>
+								<input type="radio" name="gender" value="P"> Perempuan<br>
+								<input type="radio" name="gender" value="O" checked> Lainnya
+							<?php } ?>
+
+							<br/>
+							<label for="ttl"><b>Tempat/tgl lahir</b></label>
+							<input type="text" placeholder="Ketikan tempat dan tanggal lahir Anda" name="ttl" value="<?php echo $birthday; ?>" required>
+
+							<label for="alamat"><b>Alamat lengkap</b></label>
+							<textarea rows="4" cols="50" name="alamat"> <?php echo $alamat; ?></textarea>
+							<br/><br/>
+								
+						</div>
+
+						<div class="modal-footer">
+						<button type="submit" name="regist_volunteer" class="btn btn-default">Submit</button>
+						</div>
+					</form>
+				</div>
 			</div>
           
 			
