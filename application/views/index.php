@@ -63,7 +63,7 @@
 			<div class="md-content">
 				
 				<!-- hero -->
-				<div class="hero" id="id-1" style="background-image: url('/SoSha/assets/img/bg/header2.jpg');">
+				<div class="hero" id="id-1" style="background-image: url(<?php echo base_url().'assets/img/bg/header2.jpg';?>);">
 					<div class="hero__wrapper">
 						<div class="container">
 							<div class="row">
@@ -197,9 +197,9 @@
 									<!-- swiper__module swiper-container -->
 									<div class="swiper__module swiper-container slide-image__front" data-options='{"slidesPerView":1,"spaceBetween":0}'>
 										<div class="swiper-wrapper">
-											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/SoSha3.jpg');"></div>
-											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/SoSha2.png');"></div>
-											<div class="slide-item" style="background-image: url('/SoSha/assets/img/about/SoSha1.jpg');"></div>
+											<div class="slide-item" style="background-image: url(<?php echo base_url().'assets/img/about/SoSha3.jpg'; ?>);"></div>
+											<div class="slide-item" style="background-image: url(<?php echo base_url().'assets/img/about/SoSha2.png'; ?>);"></div>
+											<div class="slide-item" style="background-image: url(<?php echo base_url().'assets/img/about/SoSha1.jpg'; ?>);"></div>
 										</div>
 										<div class="swiper-pagination-custom"></div>
 									</div><!-- End / swiper__module swiper-container -->							
