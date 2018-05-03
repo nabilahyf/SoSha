@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sosha - Social Sharing and Caring</title>
-		<link rel="shortcut icon" type="image/x-icon" href="/SoSha/assets/img/logo.jpeg" />
+		<link rel="shortcut icon" type="image/x-icon" href=<?php echo base_url()."assets/img/logo.jpeg";?> />
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
@@ -104,7 +104,7 @@
 							<div class="modal-body">
 							<?php echo form_open_multipart('Welcome/login');?>
 								<div class="imgcontainer">
-									<img src="/SoSha/assets/img/img_avatar2.png" alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
+									<img src=<?php echo base_url()."assets/img/img_avatar2.png";?> alt="Avatar" class="avatar" style="border-radius: 50%; width: 150px; margin-bottom: 20px; margin-left: 35%;">
 								</div>
 
 									<label for="email"><b>Email</b></label>
@@ -239,7 +239,7 @@
 								
 								<!--  -->
 								<div>
-									<div class="post__media"><img src="/SoSha/assets/img/blog/1.jpg" alt=""/></a></div>
+									<div class="post__media"><img src=<?php echo base_url()."assets/img/blog/1.jpg";?> alt=""/></a></div>
 									<div class="post__body">
 										<h2 class="post__title"><a href="https://medium.com/@TERRAITB/pengabdian-masyarakat-dan-mahasiswa-5b230763ad6">Kegiatan Pengabdian Masyarakat oleh Mahasiswa ITB</a></h2>
 										<div class="post__meta"><span class="author">Sisca A.R</span><span class="date">Jan 3, 2018</span></div>
@@ -252,7 +252,7 @@
 								
 								<!--  -->
 								<div>
-									<div class="post__media"><a href="#"><img src="/SoSha/assets/img/blog/2.jpg" alt=""/></a></div>
+									<div class="post__media"><a href="#"><img src=<?php echo base_url()."assets/img/blog/2.jpg";?> alt=""/></a></div>
 									<div class="post__body">
 										<h2 class="post__title"><a href="https://moestopo.ac.id/2016/12/pengabdian-kepada-masyarakat-dan-bakti-sosial-mahasiswa-baru-angkatan-2016-fikom-updmb/">Penyuluhan Kesehatan di SDN Tegal Jaya 2 oleh para Tim Medis</a></h2>
 										<div class="post__meta"><span class="author">Sisca A.R</span><span class="date">Jan 21, 2018</span></div>
@@ -265,7 +265,7 @@
 								
 								<!--  -->
 								<div>
-									<div class="post__media"><a href="#"><img src="/SoSha/assets/img/blog/3.jpg" alt=""/></a></div>
+									<div class="post__media"><a href="#"><img src=<?php echo base_url()."assets/img/blog/3.jpg";?> alt=""/></a></div>
 									<div class="post__body">
 										<h2 class="post__title"><a href="https://rsazra.co.id/rsazra/index.php/30/jumatberkah-acara-santunan-anak-yatim-dan-dhuafa-oleh-rumah-sakit-azra-bogor/">Lebih dekat dengan sesama dalam acara santunan bersama anak yatim piatu</a></h2>
 										<div class="post__meta"><span class="author">Sisca A.R</span><span class="date">Jan 23, 2018</span></div>
