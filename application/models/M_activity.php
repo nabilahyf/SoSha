@@ -21,7 +21,7 @@ class M_activity extends CI_Model{
 		if ($result->num_rows()) {
 			$this->db->select('kegiatan.*, user.full_name');
 			$this->db->where('slot >', '0');
-			$this->db->where('kegiatan_id != (SELECT kegiatan_id FROM ikut_kegiatan WHERE user_id ='.$user_id.')');
+			$this->db->where('kegiatan_id NOT IN (SELECT kegiatan_id FROM ikut_kegiatan WHERE user_id ='.$user_id.')');
 			$this->db->join('user', 'kegiatan.user_id = user.user_id');
 			$this->db->order_by("kegiatan_id", "desc");
 			return $this->db->get('kegiatan')->num_rows();
@@ -57,7 +57,7 @@ class M_activity extends CI_Model{
 		if ($result->num_rows()) {
 			$this->db->select('kegiatan.*, user.full_name');
 			$this->db->where('slot >', '0');
-			$this->db->where('kegiatan_id != (SELECT kegiatan_id FROM ikut_kegiatan WHERE user_id ='.$user_id.')');
+			$this->db->where('kegiatan_id NOT IN (SELECT kegiatan_id FROM ikut_kegiatan WHERE user_id ='.$user_id.')');
 			$this->db->join('user', 'kegiatan.user_id = user.user_id');
 			$this->db->order_by("kegiatan_id", "desc");
 			return $query = $this->db->get('kegiatan',$number,$offset)->result();
