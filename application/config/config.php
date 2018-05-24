@@ -24,9 +24,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://206.189.84.220:85/';
+// $config['base_url'] = 'http://206.189.84.220:85/';
 
-// $config['base_url'] = 'http://localhost/SoSha/';
+$config['base_url'] = 'http://localhost/SoSha/';
 
 /*
 |--------------------------------------------------------------------------
